@@ -24,7 +24,7 @@ I use this [simple tutorial](https://makori-mildred.medium.com/how-to-create-sta
 |12| [ft_strlcat]()| KO |
 |13| [ft_toupper]()| KO |
 |14| [ft_tolower]()| KO |
-|15| [ft_ft_strchr]()| KO |
+|15| [ft_strchr]()| KO |
 |16| [ft_strrchr]()| KO |
 |17| [ft_strncmp]()| KO |
 |18| [ft_memchr]()| KO |
