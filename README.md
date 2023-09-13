@@ -8,7 +8,7 @@ I use this [simple tutorial](https://makori-mildred.medium.com/how-to-create-sta
 
 
 ## Libc functions
-[ft_isalpha]()
+[ft_isalpha](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_isalpha.c)
 [ft_isdigit]()
 [ft_isalnum]()
 [ft_isascii]()
