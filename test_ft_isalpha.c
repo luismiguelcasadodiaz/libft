@@ -8,15 +8,15 @@ int	main(void)
 	int	c;
 
 	c = 65;
-	while (65 <= c && c <= 90)
+	while (c <= 90)
 	{
-		printf(" %d, %d\n", c, (isalpha(c) == ft_isalpha(c)));
+		printf(" %d, %d\n", c, (isalpha(c) != 0) && (ft_isalpha(c) != 0));
 		c++;
 	}
 	c = 97;
-	while (97 <= c && c <= 122)
+	while (c <= 122)
 	{
-		printf(" %d, %d\n", c, (isalpha(c) == ft_isalpha(c)));
+		printf(" %d, %d\n", c, (isalpha(c) != 0) && (ft_isalpha(c) != 0));
 		c++;
 	}
 	return (0);
