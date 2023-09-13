@@ -10,11 +10,11 @@ I use this [simple tutorial](https://makori-mildred.medium.com/how-to-create-sta
 ## Libc functions
 |num| Function |Status|
 |---|:---------:|--------|
-!01| [ft_isalpha](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_isalpha.c)|  23 09 13|
-!02| [ft_isdigit]()| KO |
-!03| [ft_isalnum]()| KO |
-!04| [ft_isascii]()| KO |
-!05| [ft_isprint]()| KO |
+|01| [ft_isalpha](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_isalpha.c)|  23 09 13|
+|02| [ft_isdigit]()| KO |
+|03| [ft_isalnum]()| KO |
+|04| [ft_isascii]()| KO |
+|05| [ft_isprint]()| KO |
 !06| [ft_strlen]()| KO |
 !07| [ft_memset]()| KO |
 !08| [ft_bzero]()| KO |
