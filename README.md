@@ -8,49 +8,51 @@ I use this [simple tutorial](https://makori-mildred.medium.com/how-to-create-sta
 
 
 ## Libc functions
-[ft_isalpha](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_isalpha.c)
-[ft_isdigit]()
-[ft_isalnum]()
-[ft_isascii]()
-[ft_isprint]()
-[ft_strlen]()
-[ft_memset]()
-[ft_bzero]()
-[ft_memcpy]()
-[ft_memmove]()
-[ft_strlcpy]()
-[ft_strlcat]()
-[ft_toupper]()
-[ft_tolower]()
-[ft_ft_strchr]()
-[ft_strrchr]()
-[ft_strncmp]()
-[ft_memchr]()
-[ft_memcmp]()
-[ft_strnstr]()
-[ft_atoi]()
-[ft_calloc]()
-[ft_strdup]()
+|num| Function |Status|
+|---|:---------:|--------|
+!01| [ft_isalpha](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_isalpha.c)|  23 09 13|
+!02| [ft_isdigit]()| KO |
+!03| [ft_isalnum]()| KO |
+!04| [ft_isascii]()| KO |
+!05| [ft_isprint]()| KO |
+!06| [ft_strlen]()| KO |
+!07| [ft_memset]()| KO |
+!08| [ft_bzero]()| KO |
+!09| [ft_memcpy]()| KO |
+!10| [ft_memmove]()| KO |
+!11| [ft_strlcpy]()| KO |
+!12| [ft_strlcat]()| KO |
+!13| [ft_toupper]()| KO |
+!14| [ft_tolower]()| KO |
+!15| [ft_ft_strchr]()| KO |
+!16| [ft_strrchr]()| KO |
+!17| [ft_strncmp]()| KO |
+!18| [ft_memchr]()| KO |
+!19| [ft_memcmp]()| KO |
+!20| [ft_strnstr]()| KO |
+!21| [ft_atoi]()| KO |
+!22| [ft_calloc]()| KO |
+!23| [ft_strdup]()| KO |
 
 ## Additional functions
-[ft_substr]()
-[ft_strjoin]()
-[ft_strtrim]()
-[ft_split]()
-[ft_itoa]()
-[ft_strmapi]()
-[ft_striteri]()
-[ft_putchar_fd]()
-[ft_putendl_fd]()
-[ft_putnbr_fd]()
+!24| [ft_substr]()| KO |
+!25| [ft_strjoin]()| KO |
+!26| [ft_strtrim]()| KO |
+!27| [ft_split]()| KO |
+!28| [ft_itoa]()| KO |
+!29| [ft_strmapi]()| KO |
+!30| [ft_striteri]()| KO |
+!31| [ft_putchar_fd]()| KO |
+!32| [ft_putendl_fd]()| KO |
+!33| [ft_putnbr_fd]()| KO |
 
 ##   Bonus Part
-[ft_lstnew]()
-[ft_lstadd_front]()
-[ft_lstsize]()
-[ft_lstlast]()
-[ft_lstadd_back]()
-[ft_lstdelone]()
-[ft_lstclear]()
-[ft_lstiter]()
-[ft_lstmap]()
+!34| [ft_lstnew]()| KO |
+!35| [ft_lstadd_front]()| KO |
+!36| [ft_lstsize]()| KO |
+!37| [ft_lstlast]()| KO |
+!38| [ft_lstadd_back]()| KO |
+!39| [ft_lstdelone]()| KO |
+!40| [ft_lstclear]()| KO |
+!41| [ft_lstiter]()| KO |
+!42| [ft_lstmap]()| KO |
