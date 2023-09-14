@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /* The ft_isascii() function tests for an ASCII character, which is any       */
-/* character between 0 and deciimal 127 inclusive                             */
+/* character between 0 and decimal 127 inclusive                             */
 int	ft_isascii(int c)
 {
 	return (0 <= c && c <= 127);
