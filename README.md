@@ -5,16 +5,16 @@ It will contain a lot of general-purpose functions your programs will rely upon.
 It is a static library,  with the prefix `lib` and suffix `.a` named `libft.a`. In the file libft.h will contain the prototypes of all functions included in my library.
 
 I use this [simple tutorial](https://makori-mildred.medium.com/how-to-create-static-library-in-c-and-how-to-use-it-b8b3e1fde999) to create the `Makefile`
-
+Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.sh](https://github.com/luismiguelcasadodiaz/libft/blob/main/touch.sh ) that automaticlly create the 42 files `.c` that compose `libfft.a` . Each file is created with the 42 header.
 
 ## Libc functions
 |num| Function |Status|
 |---|:---------:|--------|
-|01| [ft_isalpha](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_isalpha.c)|  23 09 13|
-|02| [ft_isdigit]()| KO |
-|03| [ft_isalnum]()| KO |
-|04| [ft_isascii]()| KO |
-|05| [ft_isprint]()| KO |
+|01| [ft_isalpha](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_isalpha.c)| 23 09 13|
+|02| [ft_isdigit](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_isdigit.c)| 23 09 14|
+|03| [ft_isalnum](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_isalnum.c)| 23 09 14|
+|04| [ft_isascii](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_isascii.c)| 23 09 14|
+|05| [ft_isprint](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_isprint.c)| 23 09 14 |
 |06| [ft_strlen]()| KO |
 |07| [ft_memset]()| KO |
 |08| [ft_bzero]()| KO |
