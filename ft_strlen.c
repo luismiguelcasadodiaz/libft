@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/15 19:36:06 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/15 20:43:58 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -31,6 +31,11 @@ size_t	ft_strlen(const char *s)
 		return (0);
 }
 */
+
+/* 6.72seg when executed 100 000 000 times if compiled without -O flag */
+/* 1.97seg when executed 100 000 000 times if compiled with -O1 flag   */
+/* 1.92seg when executed 100 000 000 times if compiled with -O3 flag   */
+
 size_t	ft_strlen(const char *s)
 {
 	size_t	idx;
@@ -40,3 +45,32 @@ size_t	ft_strlen(const char *s)
 		;
 	return (idx);
 }
+
+/* 7.21seg when executed 100 000 000 times if compiled without -O flag */
+/* 1.97seg when executed 100 000 000 times if compiled with -O1 flag   */
+/* 1.92seg when executed 100 000 000 times if compiled with -O3 flag   */
+/*
+size_t	ft_strlen(const char *s)
+{
+	size_t	idx;
+
+	idx = -1;
+	while (s[++idx])
+		;
+	return (idx);
+}
+*/
+/*  9,85seg when executed 100 000 000 times if compiled without -O flag */
+/* 1.97seg when executed 100 000 000 times if compiled with -O1 flag   */
+/* 1.92seg when executed 100 000 000 times if compiled with -O3 flag   */
+/*
+size_t	ft_strlen(const char *s)
+{
+	size_t	idx;
+
+	idx = 0;
+	while (*(s + idx))
+		idx++;
+	return (idx);
+}
+*/

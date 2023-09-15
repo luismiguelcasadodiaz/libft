@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 18:11:26 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/15 19:32:20 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/15 20:21:31 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -16,24 +16,16 @@ size_t	ft_strlen(const char *s);
 
 void	test(const char s[])
 {
-	size_t	n;
-
-	if (s == NULL)
-	{
-		n = ft_strlen(s);
-		printf("I say %lu", n);
-		printf(", he says %lu for string >%s<\n", strlen(s), "NULL");
-	}
-	else
-		printf("I  %lu, he %lu for string >%s<\n", ft_strlen(s), strlen(s), s);
+	/*printf("I  %lu, he %lu for string >%s<\n", ft_strlen(s), strlen(s), s);*/
+	ft_strlen(s);
 }
 
 int	main(void)
 {
-	test("L");
-	test("Lu");
-	test("");
-	test("\0");
-	test(NULL);
+	int	i;
+	
+	i = 0;
+	while (i++ < 100000000)
+		test("Luis Miguel Casado Diaz esta buscando la forma mas eficiente ");
 	return (0);
 }
