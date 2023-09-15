@@ -6,16 +6,68 @@ CC = cc
 CFLAGS = -Wall -Wextra  -Werror
 
 # From 4.4.3 The Function wildcard gnu make manual....
-# Althought wildcard expamds automaticaly in rules
+# Althought wildcard exparnds automaticaly in rules
 # I use the wildcard function to expand wildcards in variables. 
+# SRCS = $(wildcard *.c)
+#
+# This technique is forbidden according to 42 Norm point III.11
+#
+# So I must explicitly enumerate files for the project.
 
-SRCS = $(wildcard *.c)
+SRCS = ft_atoi.c \
+       ft_bzero.c \
+       ft_calloc.c \
+       ft_isalnum.c \
+       ft_isalpha.c \
+       ft_isascii.c \
+       ft_isdigit.c \
+       ft_isprint.c \
+       ft_itoa.c \
+       ft_memchr.c \
+       ft_memcmp.c \
+       ft_memcpy.c \
+       ft_memmove.c \
+       ft_memset.c \
+       ft_putchar_fd.c \
+       ft_putendl_fd.c \
+       ft_putnbr_fd.c \
+       ft_split.c \
+       ft_strchr.c \
+       ft_strdup.c \
+       ft_striteri.c \
+       ft_strjoin.c \
+       ft_strlcat.c \
+       ft_strlcpy.c \
+       ft_strlen.c \
+       ft_strmapi.c \
+       ft_strncmp.c \
+       ft_strnstr.c \
+       ft_strrchr.c \
+       ft_strtrim.c \
+       ft_substr.c \
+       ft_tolower.c \
+       ft_toupper.c \
+
+BONUS_SRCS = ft_lstadd_back.c \
+             ft_lstadd_front.c \
+             ft_lstclear.c \
+             ft_lstdelone.c \
+             ft_lstiter.c \
+             ft_lstlast.c \
+             ft_lstmap.c \
+             ft_lstnew.c \
+             ft_lstsize.c \
 
 # Generate a list of object files by replacing .c with .o
 
 OBJS = $(patsubst %.c, %.o, $(SRCS))
+BONUS_OBJS = $(patsubst %.c, %.o, $(BONUS_SRCS))
+
+# The default goal is the first target of the first rule in the first makefile.
+# This is the reason for writtting this rule the first one
 
 
+all: $(NAME)
 # Vous devez utiliser la commande ar pour créer votre bibliothèque
 # NOTE rcs:
 # - r  means that if the library already exists, replace the old files within the library with your new files. 
@@ -43,35 +95,17 @@ ft_bzero.o: ft_bzero.c
 	$(CC) $(CFLAGS) -c $< -o $@
 ft_calloc.o: ft_calloc.c
 	$(CC) $(CFLAGS) -c $< -o $@
-ft_isalnum.o: ft_isalnum.c
+ft_isalnum.o: ft_isalnum.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
-ft_isalpha.o: ft_isalpha.c
+ft_isalpha.o: ft_isalpha.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
-ft_isascii.o: ft_isascii.c
+ft_isascii.o: ft_isascii.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
-ft_isdigit.o: ft_isdigit.c
+ft_isdigit.o: ft_isdigit.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
-ft_isprint.o: ft_isprint.c
+ft_isprint.o: ft_isprint.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 ft_itoa.o: ft_itoa.c
-	$(CC) $(CFLAGS) -c $< -o $@
-ft_lstadd_back.o: ft_lstadd_back.c
-	$(CC) $(CFLAGS) -c $< -o $@
-ft_lstadd_front.o: ft_lstadd_front.c
-	$(CC) $(CFLAGS) -c $< -o $@
-ft_lstclear.o: ft_lstclear.c
-	$(CC) $(CFLAGS) -c $< -o $@
-ft_lstdelone.o: ft_lstdelone.c
-	$(CC) $(CFLAGS) -c $< -o $@
-ft_lstiter.o: ft_lstiter.c
-	$(CC) $(CFLAGS) -c $< -o $@
-ft_lstlast.o: ft_lstlast.c
-	$(CC) $(CFLAGS) -c $< -o $@
-ft_lstmap.o: ft_lstmap.c
-	$(CC) $(CFLAGS) -c $< -o $@
-ft_lstnew.o: ft_lstnew.c
-	$(CC) $(CFLAGS) -c $< -o $@
-ft_lstsize.o: ft_lstsize.c
 	$(CC) $(CFLAGS) -c $< -o $@
 ft_memchr.o: ft_memchr.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -132,16 +166,51 @@ fclean: clean
 # rebuild all after removing all
 re: fclean all
 
+norma: $(SRCS)
+	norminette $(SRCS)
 
-all: $(NAME)
 
 
 # Pour rendre des bonus, vous devez inclure une règle bonus à votre Makefile qui 
 # ajoutera les divers headers, librairies ou fonctions qui ne sont pas autorisées 
 # dans la partie principale du projet. 
 # Les bonus doivent être dans un fichier différent : _bonus.{c/h}.
-bonus:
+# There is a contradiciton between french version and english version
+# Add structure s_list  declaration to your libft.h file:
+bonus: bonus_setup $(BONUS_OBJS) bonus_restore
+	ar rcs $(NAME) $(BONUS_OBJS)
 
+bonus_setup:
+	head -14 libft.h > tirame.h
+	echo "typedef struct s_list\n{\n\tvoid\t\t\t*content;\n\tstruct s_list\t*next;\n}\t\t\tt_list;\n" >> tirame.h
+	tail -6 libft.h >> tirame.h
+	mv libft.h libft.h.bck
+	mv tirame.h libft.h
 
-norma: $(SRCS)
-	norminette $(SRCS)
+bonus_restore:
+	mv libft.h.bck libft.h
+
+ft_lstadd_back.o: ft_lstadd_back.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+ft_lstadd_front.o: ft_lstadd_front.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+ft_lstclear.o: ft_lstclear.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+ft_lstdelone.o: ft_lstdelone.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+ft_lstiter.o: ft_lstiter.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+ft_lstlast.o: ft_lstlast.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+ft_lstmap.o: ft_lstmap.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+ft_lstnew.o: ft_lstnew.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+ft_lstsize.o: ft_lstsize.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+bonus_clean:
+	rm -f ft_lst*.o
+
+bonus_norma: $(BONUS_SRCS)
+	norminette $(BONUS_SRCS)
