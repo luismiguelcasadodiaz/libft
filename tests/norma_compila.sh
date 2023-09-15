@@ -3,5 +3,7 @@
 # I reuse the filename to find the test files for each function i want to test the file name 
 name=${1%.c}
 norminette -R CheckForbiddenSourceHeader ../$1
-cc  -Wall -Wextra -Werror -o test_$name test_$name.c ../$1 ../ft_isalpha.c ../ft_isdigit.c
+cc -g -Wall -Wextra -Werror -c ../$1 ../libft.h
+cc -g -Wall -Wextra -Werror -c test_$name.c ../libft.h
+cc -g -Wall -Wextra -Werror -o test_$name test_$name.o $name.o 
 ./test_$name
