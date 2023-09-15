@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:10:28 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/13 17:46:57 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/15 10:52:22 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@ int	ft_isupper(int c)
 {
 	return ((65 <= c && c <= 90));
 }
-
 
 int	ft_islower(int c)
 {
