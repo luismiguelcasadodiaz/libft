@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/15 20:43:58 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/19 14:34:39 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -40,9 +40,9 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	idx;
 
-	idx = -1;
-	while (s[++idx] != '\0')
-		;
+	idx = 0;
+	while (s[idx] != '\0')
+		idx++;
 	return (idx);
 }
 
