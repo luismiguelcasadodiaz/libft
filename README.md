@@ -18,7 +18,7 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 |06| [ft_strlen](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strlen.c)| 23 09 15|
 |07| [ft_memset](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memset.c)| 23 09 18|
 |08| [ft_bzero](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_bzero.c)| 23 09 19|
-|09| [ft_memcpy](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memcpyset.c)| 23 09 19|
+|09| [ft_memcpy](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memcpy.c)| 23 09 19|
 |10| [ft_memmove](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memmove.c)| 23 09 19 |
 |11| [ft_strlcpy]()| KO |
 |12| [ft_strlcat]()| KO |
