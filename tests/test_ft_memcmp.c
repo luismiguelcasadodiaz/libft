@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:19:56 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/20 17:44:47 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:48:40 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "../libft.h"
 
-void	test(char *s1, char* s2, size_t len)
+void	test(char *s1, char *s2, size_t len)
 {
 	printf("compares >%s< wiht >%s< in the ", s1, s2);
 	printf("the firsts %zu bytes:", len);

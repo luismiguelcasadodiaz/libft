@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/19 15:30:10 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:17:54 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -26,7 +26,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*uc_src;
 	size_t			idx;
 
-	if (n)
+	if (dst != NULL && src != NULL && n)
 	{
 		uc_dst = (unsigned char *)dst;
 		uc_src = (unsigned char *)src;
