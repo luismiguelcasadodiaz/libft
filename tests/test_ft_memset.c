@@ -6,26 +6,23 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 19:39:37 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/19 19:39:45 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/20 09:39:37 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-void	*ft_memset(void *b, int c, size_t len);
+#include "../libft.h"
 
 void	test(char *text, int c, size_t len)
 {
 	int		num;
 	char	*mytext;
 	char	*histext;
-	
+
 	printf("set %zu bytes:", len);
-	num = 0;
-	while (text[num] != '\0')
-		num++;
+	num = ft_strlen(text);
 	mytext = (char *)malloc(num * sizeof(char));
 	mytext = strcpy(mytext, text);
 	printf("I >%s<,", (char *)ft_memset(mytext, c, len));
@@ -40,7 +37,7 @@ void	test_num(int c, size_t len)
 {
 	int		mynum;
 	int		hisnum;
-	
+
 	mynum = 2147111111;
 	hisnum = 2147111111;
 	printf("set %zu bytes:", len);
@@ -50,7 +47,6 @@ void	test_num(int c, size_t len)
 
 int	main(void)
 {
-
 	test("Luis", 65, 0);
 	test("Luis", 65, 1);
 	test("Luis", 65, 2);

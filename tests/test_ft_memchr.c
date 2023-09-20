@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:19:56 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/20 13:45:09 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/20 14:03:30 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -17,11 +17,10 @@
 
 void	test(char *text, int c, size_t len)
 {
-	printf("chech if %c is in the firsts %zu bytes of >%s<:", (unsigned char) c, len, text);
+	printf("chech if %c is in", (unsigned char)c);
+	priintf("the firsts %zu bytes of >%s<:", len, text);
 	printf("I >%s<,", (char *)ft_memchr(text, c, len));
 	printf("he >%s<\n", (char *)memchr(text, c, len));
-	//printf("==> %s", memcmp(ft_memchr(text, c, len), memchr(text, c, len), 10)? "\033[1;91mKO": "\033[1;92mOK");
-	//printf("\033[0m\n");
 }
 
 int	main(void)
@@ -39,3 +38,5 @@ int	main(void)
 	test("", 65, 8);
 	return (0);
 }
+//printf(" c, len), memchr(text, c, len), 10)? "\033[1;91mKO": "\033[1;92mOK");
+//printf("\033[0m\n");
