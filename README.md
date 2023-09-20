@@ -27,8 +27,8 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 |15| [ft_strchr]()| KO |
 |16| [ft_strrchr]()| KO |
 |17| [ft_strncmp]()| KO |
-|18| [ft_memchr]()| KO |
-|19| [ft_memcmp]()| KO |
+|18| [ft_memchr](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memchr.c)| 23 09 20|
+|19| [ft_memcmp](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memcmp.c)| 23 09 20|
 |20| [ft_strnstr]()| KO |
 |21| [ft_atoi]()| KO |
 |22| [ft_calloc]()| KO |

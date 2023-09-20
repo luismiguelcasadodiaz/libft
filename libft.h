@@ -6,12 +6,12 @@
 /*   By: luicasad <luicasad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 01:03:05 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/19 19:44:00 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:38:22 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -23,4 +23,6 @@ void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 #endif /* LIBFT_H */
