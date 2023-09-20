@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/19 19:45:28 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:42:02 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -45,6 +45,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t			idx;
 	size_t			max;
 
+	if (dst == NULL)
+	{
+		uc_dst = NULL;
+		*uc_dst = '\0';
+	}
 	if (len)
 	{
 		max = ft_strlen(src);
