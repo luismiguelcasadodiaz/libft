@@ -22,10 +22,10 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 |10| [ft_memmove](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memmove.c)| 23 09 19 |
 |11| [ft_strlcpy]()| KO |
 |12| [ft_strlcat]()| KO |
-|13| [ft_toupper]()| KO |
-|14| [ft_tolower]()| KO |
-|15| [ft_strchr]()| KO |
-|16| [ft_strrchr]()| KO |
+|13| [ft_toupper](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_toupper.c)| 23 09 22|
+|14| [ft_tolower](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_tolower.c))| 23 09 22|
+|15| [ft_strchr](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strchr.c)| 23 09 22|
+|16| [ft_strrchr](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strrchr.c)| 23 09 22 |
 |17| [ft_strncmp]()| KO |
 |18| [ft_memchr](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memchr.c)| 23 09 20|
 |19| [ft_memcmp](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memcmp.c)| 23 09 20|
