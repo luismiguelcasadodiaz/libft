@@ -31,8 +31,10 @@ SRCS = ft_isalnum.c \
        ft_strrchr.c \
        ft_tolower.c \
        ft_toupper.c \
-#   	ft_atoi.c \
-       ft_calloc.c \
+	   ft_atoi.c \
+       ft_strtrim.c \
+       ft_strncmp.c \
+#      ft_calloc.c \
        ft_itoa.c \
        ft_putchar_fd.c \
        ft_putendl_fd.c \
@@ -43,7 +45,6 @@ SRCS = ft_isalnum.c \
        ft_strjoin.c \
        ft_strlcat.c \
        ft_strmapi.c \
-       ft_strncmp.c \
        ft_strnstr.c \
        ft_strtrim.c \
        ft_substr.c \
@@ -89,7 +90,10 @@ $(NAME): $(OBJS)
 # but after reading Norm V4 point III.11 Makefile.....
 # All source files you need to compile your project must be explicitly named in your Makefile.
 # ... I elaborated this second option.
- 
+
+# if any change un Makefile then rebuil
+Makefile:fclean
+
 # removes all generated object files
 clean:
 	rm -f *.o
