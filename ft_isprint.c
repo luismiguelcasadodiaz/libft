@@ -6,11 +6,10 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/15 10:53:26 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/23 08:48:40 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
+#include "libft.h"
 
 /* ft_is_punc is a helper funciton to verificate the differente character     */
 /* ranges.                                                                    */
@@ -28,7 +27,7 @@ int	ft_isdigit(int c);
 /*   173 ``{''     174 ``|''     175 ``}''     176 ``~''                      */
 /*                                                                            */
 
-int	ft_is_punc(int c)
+static int	ft_is_punc(int c)
 {
 	int	is_punc;
 
