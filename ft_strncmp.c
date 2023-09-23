@@ -6,6 +6,50 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/15 15:13:26 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/23 21:25:22 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
+/* The ft_strncmp() function compares the first (at most) n bytes of the two  */
+/* strings s1 and s2.                                                         */
+/* The comparison is done using unsigned characters.                          */
+/*                                                                            */
+/* RETURNS                                                                    */
+/*                                                                            */
+/* An integer indicating the result of the comparison, as follows:            */
+/*   •  0, if the s1 and s2 are equal;                                        */
+/*   •  a negative value if s1 is less than s2;                               */
+/*   •  a positive value if s1 is greater than s2.                            */
+/*                                                                            */
+/* OPERATION                                                                  */
+/* While there are chars in the strings and idx smaller than n the funcition  */
+/* checks if chars in same position are equal.                                */
+/*                                                                            */
+/* if the while pushed the idx till n means that the strings have the first   */
+/* n char equal so the fucntion returns 0.                                    */
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	unsigned char	*uc_s1;
+	unsigned char	*uc_s2;
+	size_t			s1n;
+	size_t			s2n;
+	size_t			i;
+
+	if (n)
+	{
+		uc_s1 = (unsigned char *) s1;
+		uc_s2 = (unsigned char *) s2;
+		s1n = ft_strlen(s1);
+		s2n = ft_strlen(s2);
+		i = 0;
+		while (i < n && i <= s1n && i <= s2n && uc_s1[i] == uc_s2[i])
+			i++;
+		if (i >= n)
+			return (0);
+		else
+			return (uc_s1[i] - uc_s2[i]);
+	}
+	return (0);
+}
