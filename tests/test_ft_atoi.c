@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:35:31 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/23 19:21:02 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/24 11:48:24 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		src = argv[1];
-		printf("src = >%s<, ", src);
-		printf("mine >%d<", ft_atoi(src));
-		printf("your >%d<\n", atoi(src));
+		prueba(src);
 		prueba(" --+--+1234a-b567");
 		prueba(" ---+--+1234-ab567");
 		prueba(" ---+--+1234");
