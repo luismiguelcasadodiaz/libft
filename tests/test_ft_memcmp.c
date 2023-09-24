@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_memchr.c                                   :+:      :+:    :+:   */
+/*   test_ft_memcmp.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:19:56 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/20 17:48:40 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/24 11:13:22 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -31,8 +31,8 @@ int	main(void)
 	test("ABCDE2GHIJ", "ABCDE1GHIJ", 4);
 	test("ABCDE2GHIJ", "ABCDE1GHIJ", 5);
 	test("ABCDE2GHIJ", "ABCDE1GHIJ", 6);
-	test("ABCDE2GHIJ", "ABCDE1GHIJ", 7);
-	test("ABCDE2GHIJ", "ABCDE1GHIJ", 8);
+	test("ABCDE2GHIJ", "ABCDE1GHIJ", 2147483647);
+	test("ABCDE2GHIJ", "ABCDE1GHIJ", 2147483648);
 	test(NULL, "ABCDE1GHIJ", 8);
 	return (0);
 }
