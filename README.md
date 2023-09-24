@@ -31,8 +31,8 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 |19| [ft_memcmp](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memcmp.c)| 23 09 20|
 |20| [ft_strnstr]()| KO |
 |21| [ft_atoi](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_atoi.c)| 23 09 23|
-|22| [ft_calloc]()| KO |
-|23| [ft_strdup]()| KO |
+|22| [ft_calloc](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_calloc.c)| 23 09 24|
+|23| [ft_strdup](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strdup.c))| 23 09 24|
 
 ## Additional functions
 |num| Function |Status|
