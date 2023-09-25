@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/25 11:51:29 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/25 20:14:03 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -59,6 +59,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t sz)
 	{
 		dst[dst_idx++] = src[src_idx++];
 	}
-	dst[++src_idx] = '\0';
+	dst[++dst_idx] = '\0';
 	return (dst_len + src_len);
 }
