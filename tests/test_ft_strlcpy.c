@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:35:31 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/25 11:06:12 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/25 11:16:03 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <limits.h>
@@ -24,13 +24,13 @@ void	print_ok_ko(size_t comp)
 	printf("\033[0m\n");
 }
 
-void	show_results(char *s, size_t s_len, char* d, size_t d_len, int trunc)
+void	show_results(char *s, size_t s_len, char *d, size_t d_len)
 {
 	printf("copy of src >%s< ", s);
 	printf("with %ld chars ", s_len);
 	printf("into dst >%s< ", d);
 	printf("with %ld chars. ", d_len);
-	if (trunc)
+	if (d_len < s_len)
 		printf("Truncated YES.\n");
 	else
 		printf("Truncated  NO.\n");
@@ -54,8 +54,8 @@ int	main(int argc, char **argv)
 		while (src_len < dst_len)
 			dst[src_len++] = 'a';
 		src_len = ft_strlcpy(dst, src, dst_len);
-		show_results(src, src_len, dst , dst_len, dst_len < src_len);
+		show_results(src, src_len, dst, dst_len);
 		free(dst);
 	}
-return (0);
+	return (0);
 }
