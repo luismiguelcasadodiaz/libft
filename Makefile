@@ -47,7 +47,6 @@ SRCS = ft_isalnum.c \
        ft_split.c \
        ft_striteri.c \
        ft_strmapi.c \
-       ft_strtrim.c \
 
 #BONUS_SRCS = ft_lstadd_back.c \
              ft_lstadd_front.c \
@@ -68,7 +67,7 @@ OBJS = $(patsubst %.c, %.o, $(SRCS))
 # This is the reason for writtting this rule the first one
 
 
-all: $(NAME) Makefile
+all: $(NAME) 
 # Vous devez utiliser la commande ar pour créer votre bibliothèque
 # NOTE rcs:
 # - r  means that if the library already exists, replace the old files within the library with your new files. 
@@ -90,7 +89,7 @@ $(NAME): $(OBJS)
 # ... I elaborated this second option.
 
 # if any change un Makefile then rebuil
-Makefile:fclean
+#Makefile:fclean
 
 # removes all generated object files
 clean:

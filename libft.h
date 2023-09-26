@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 01:03:05 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/25 19:30:38 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/26 10:38:06 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -35,7 +35,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t sz);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char	*big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
-char	*ft_strtrim(char *s);
+char	*ft_strtrim(char const *s, char const *set);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_tolower(int c);
