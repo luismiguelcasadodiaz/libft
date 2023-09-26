@@ -6,71 +6,59 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/23 11:06:38 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/26 16:03:33 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-/* my_isspace checks for white-space characters.                              */
+/* ft_strtrim() allocates (with malloc(3)) and returns a copy of s with the   */
+/* characters specified in ’set’ removed from the BEGINNING and the END of    */
+/* the string. ft_strtrim() does not removed in the mmiddle of the string.    */
 /*                                                                            */
-/* In "C" and "POSIX" locales, these  are: space (' '), form-feed ('\f'),     */
-/* newline ('\n'), carriage return ('\r'), horizontal tab ('\t'), and         */
-/* vertical tab ('\v').                                                       */
-/*                                                                            */
-/* RETURNS:                                                                   */
-/*  0 (false) if c is not an space                                            */
-/*  1 (true)  if c belong to the "space" set                                  */
-/*                                                                            */
-static int	my_isspace(int c)
-{
-	int	result;
-
-	result = ((char)c == ' ');
-	result = result || ((char)c == '\f');
-	result = result || ((char)c == '\n');
-	result = result || ((char)c == '\r');
-	result = result || ((char)c == '\t');
-	result = result || ((char)c == '\v');
-	return (result);
-}
-
-/* ft_strtrim() removes all whitespace characters from the beginning and the  */
-/* end of a string.                                                           */
-/* As whitespace is counted everything for which my_isspace returns true.     */
+/* GETS                                                                       */
+/*  s: the strig to trim.                                                     */
+/*  set: the reference set of chars to trim                                   */
 /*                                                                            */
 /* RETURNS                                                                    */
-/* Returns its argument without leading and triling spaces                    */
+/*   the trimmed string or NULL if allocation fails                           */
 /*                                                                            */
 /* OPERATION                                                                  */
-/* Loops from the begining towards end skipping spaces. When detects no-space */
-/* keeps index of first valid no-space in variable ini                        */
+/*   Loops from the begining towards end skipping chars in set. When detects  */
+/*   the first no-set-belonging char, keeps index in variable s_ini.          */
 /*                                                                            */
-/* Loops from end towards the begining skipping spaces. When detects no-space */
-/* keeps index of last  valid no_space in variable end                        */
+/*   Loops from end towards the begining skipping chars in set. When detects  */
+/*   the first no-set-belonging char, keeps index in variable s_end.          */
 /*                                                                            */
-/* Shift ini..end char to string's head                                       */
+/*   When (ft_strchr(set, s[s_ini]) != NULL) true it finds a removable char.  */
 /*                                                                            */
-/* end = ft_strlen(s) - 1;// to correct base zero c indexing                  */
-
-char	*ft_strtrim(char *s)
+/*   s_end - s_ini + 1 equals the num of chars to keep.                       */
+/*                                                                            */
+/*   Into the new allocated memory i copy trimmed part of s                   */
+/*                                                                            */
+/*  Null/terminate t and return it                                            */
+/*                                                                            */
+char	*ft_strtrim(char const *s, char const *set)
 {
-	int	ini;
-	int	end;
-	int	idx;
+	size_t	s_len;
+	size_t	s_ini;
+	size_t	s_end;
+	char	*t;
+	size_t	t_idx;
 
-	end = ft_strlen(s) - 1;
-	ini = 0;
-	while (my_isspace(s[ini]) && ini <= end)
-		ini++;
-	while (my_isspace(s[end]) && 0 <= end)
-		end--;
-	idx = 0;
-	while (ini <= end)
+	s_len = ft_strlen(s);
+	s_ini = 0; 
+	while ((s_ini <= s_len) && (ft_strchr(set, s[s_ini]) != NULL))
+		s_ini++;
+	s_end = 0; 
+	while ((0 <= s_end) && (ft_strchr(set, s[s_end]) != NULL))
+		s_end--;
+	t = (char *)malloc((s_end - s_ini + 1) + 1);
+	if (t != NULL)
 	{
-		s[idx] = s[ini];
-		idx++;
-		ini++;
+		t_idx = 0;
+		while (s_ini <= s_end)
+			t[t_idx++] = s[s_ini++];
+		t[t_idx] = '\0';
 	}
-	s[idx] = '\0';
-	return (s);
+	return (t);
 }
