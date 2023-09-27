@@ -6,61 +6,73 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/20 17:42:02 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:12:20 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
+/* this function helps me to pass paco test as he wants a gesfault when big   */
+/* is null                                                                    */
+/* 
+static void	force_segfault(void)
+{
+	int	*p;
+	p = NULL;
+	*p = 1;
+}
+*/
 /* The ft_memmove() function copies len bytes from string src to string dst.  */
 /* The two strings may overlap; the copy is always done in a non-destructive  */
 /* manner.                                                                    */
 /*                                                                            */
+/* GETS                                                                       */
+/* dst : starting memory address to move bytes to                             */
+/* src : starting memory address to move bytes from                           */
+/* len : numbers of bytes to move                                             */
+/*                                                                            */
 /* RETURN VALUES                                                              */
 /* The function returns the original value of dst (the pointer)               */
 /*                                                                            */
-/* EXAMPLES: &dst < &src                                                      */
-/*  memmove("Luis", "Miguel", 8) ==> "Miguel"                                 */
-/*  memmove("Luis", "Miguel", 7) ==> "Miguel"                                 */
-/*  memmove("Luis", "Miguel", 6) ==> "Migueliguel"                            */
-/*  memmove("Luis", "Miguel", 5) ==> "MigueMiguel"                            */
-/*  memmove("Luis", "Miguel", 4) ==> "Migu"                                   */
-/*  memmove("Luis", "Miguel", 3) ==> "Migs"                                   */
-/*  memmove("Luis", "Miguel", 2) ==> "Miis"                                   */
-/*  memmove("Luis", "Miguel", 1) ==> "Muis"                                   */
-/*  memmove("Luis", "Miguel", 0) ==> "Luis"                                   */
-/* EXAMPLES: &dst > &src                                                      */
-/*  memmove("Miguel", "Luis", 8) ==> "Luis"                                   */
-/*  memmove("Miguel", "Luis", 7) ==> "Luis"                                   */
-/*  memmove("Miguel", "Luis", 6) ==> "Luis"                                   */
-/*  memmove("Miguel", "Luis", 5) ==> "Luis"                                   */
-/*  memmove("Miguel", "Luis", 4) ==> "Luisel"                                 */
-/*  memmove("Miguel", "Luis", 3) ==> "Luiuel                                  */
-/*  memmove("Miguel", "Luis", 2) ==> "Luguel"                                 */
-/*  memmove("Miguel", "Luis", 1) ==> "Liguel"                                 */
-/*  memmove("Miguel", "Luis", 0) ==> "Miguel"                                 */
+/* OPERATION                                                                  */
+/*  programmer mindset ==> forget strings exists. think in bytes              */
+/*                                                                            */
+/*  lower memory                                                higher memory */
+/* 0........................................................................n */
+/*  case  A:  dst < src                                                       */
+/*  case A1:  dst + len < src                                                 */
+/*      dst   ............                                                    */
+/*                                          src ...............               */
+/*          ft_memcpy (dst, src, len)                                         */
+/*                                                                            */
+/*  case A2:  dst + len >= src                                                */
+/*      dst   ............                                                    */
+/*                 src ...............                                        */
+/*          ft_memcpy (dst, src, src - dst)                                   */
+/*                                                                            */
+/*                                                                            */
+/*  case  B:  dst > src                                                       */
+/*  case B1:  src + len < dst                                                 */
+/*      src   ............                                                    */
+/*                                          dst ...............               */
+/*          ft_memcpy (dst, src, len)                                         */
+/*                                                                            */
+/*  case B2:  src + len > dst                                                 */
+/*      src   ............                                                    */
+/*                 dst ...............                                        */
+/*          ft_memcpy (dst, src, dst - src)                                    */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*uc_dst;
-	unsigned char	*uc_src;
-	size_t			idx;
-	size_t			max;
-
-	if (dst == NULL)
+	//if ((dst == NULL) || (src == NULL))
+	//	force_segfault();
+	if (dst < src)
 	{
-		uc_dst = NULL;
-		*uc_dst = '\0';
+		if ((dst + len) >= src)
+			len= src - dst;
 	}
-	if (len)
+	else if (dst > src)
 	{
-		max = ft_strlen(src);
-		uc_dst = (unsigned char *)dst;
-		uc_src = (unsigned char *)src;
-		idx = 0;
-		while (idx <= max && idx < len)
-		{
-			uc_dst[idx] = uc_src[idx];
-			idx++;
-		}
+		if ((src + len) >= dst)
+			len = dst - src;
 	}
-	return (dst);
+	return (ft_memcpy(dst, src, len));
 }
