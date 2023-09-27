@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/22 20:06:03 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/27 20:26:45 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,14 +16,14 @@
 /*                                                                            */
 /* The function loops the string till string ends.                            */
 /*   - when match happens it register the match in Last_found                 */
-/*   - when string ends if nothing found (-1) checks if target was '\0'       */
+/*   - when string ends if nothing found (-1) checks if target was null-term  */
 /*     If it was retunrs string end otherwise null                            */
 /* RETURNS                                                                    */
 /* ft_strrchr() function returnis a pointer to the matched character or NULL  */
 /* if the character is not found.                                             */
 /*                                                                            */
 /* The terminating null byte is considered part of the string, so that if c   */
-/* is specified as '\0', these functions return a pointer to the terminator   */
+/* is specified as null, these functions return a pointer to the terminator   */
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t			idx;

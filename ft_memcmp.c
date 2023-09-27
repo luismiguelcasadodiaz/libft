@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/20 17:39:49 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/27 20:17:07 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,7 +18,7 @@
 /*                                                                            */
 /* The ft_memcmp() function returns zero if the two strings are identical,    */
 /* otherwise returns the difference between the first two differing bytes     */
-/* (as unsigned char values, `\200' is greater than `\0',for example).        */
+/* (as unsigned char values, `\200' is greater than `\0',for example).     */
 /*                                                                            */
 /* Zero-length strings are always identical.                                  */
 /*                                                                            */

@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/27 16:12:20 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/27 20:19:32 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -59,7 +59,7 @@ static void	force_segfault(void)
 /*  case B2:  src + len > dst                                                 */
 /*      src   ............                                                    */
 /*                 dst ...............                                        */
-/*          ft_memcpy (dst, src, dst - src)                                    */
+/*          ft_memcpy (dst, src, dst - src)                                   */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	//if ((dst == NULL) || (src == NULL))
@@ -67,7 +67,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (dst < src)
 	{
 		if ((dst + len) >= src)
-			len= src - dst;
+			len = src - dst;
 	}
 	else if (dst > src)
 	{
