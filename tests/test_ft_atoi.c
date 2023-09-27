@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:35:31 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/24 11:48:24 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:36:14 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,6 @@ int	main(int argc, char **argv)
 	{
 		src = argv[1];
 		prueba(src);
-		prueba(" --+--+1234a-b567");
-		prueba(" ---+--+1234-ab567");
-		prueba(" ---+--+1234");
-		prueba("-2147483648");
-		prueba("-2147483647");
-		prueba("-2147");
-		prueba("-1");
-		prueba("095");
-		prueba("1.90");
-		prueba("2147483646");
-		prueba("2147483647");
 	}
 	return (0);
 }
