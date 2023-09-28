@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 19:40:58 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/27 14:44:09 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/28 13:55:17 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -30,7 +30,7 @@ void	test(char *dst, const char *src, size_t len)
 	hisdst = strcpy(hisdst, dst);
 	hisdst = (char *)memmove(hisdst, src, len);
 	printf("he >%s<", hisdst);
-	if (ft_memcmp(mydst, hisdst, len ) == 0)
+	if (ft_memcmp(mydst, hisdst, len) == 0)
 		printf("\033[1;92m[OK]");
 	else
 		printf("\033[1;91m[KO]");
@@ -94,10 +94,11 @@ void	test_null_one(char *dst, const char *src, size_t len)
 }
 
 int	main(int argc, char **argv)
-{	
+{
 	char	*src;
 	char	*dst;
 	size_t	len;
+
 	if (argc != 4)
 		printf("Usage ./test_ft_memmove dst src len");
 	else
@@ -105,11 +106,11 @@ int	main(int argc, char **argv)
 		len = (size_t)ft_atoi(argv[3]);
 		dst = argv[1];
 		src = argv[2];
-		test(dst, src, len);
-		test(dst + 1, src, len);
-		test(dst + 2, src, len);
-		test(dst + 3, src, len);
-		test(dst + 4, src, len);
+		test(src, src, len);
+		test(src + 1, src, len);
+		test(src + 2, src, len);
+		test(src + 3, src, len);
+		test(src + 4, src, len);
 	}
 	return (0);
 }
