@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:35:31 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/25 19:20:14 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/28 18:34:19 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	main(int argc, char **argv)
 		printf("substr >%s<\n", ft_substr(str, start, len));
 		printf("str = >%s<, ", str);
 		printf("substr >%s<\n", ft_substr(str, start, 0));
+		printf("substr >%s<\n", ft_substr((char *)((void *)0), start, 0));
 	}
 	return (0);
 }
