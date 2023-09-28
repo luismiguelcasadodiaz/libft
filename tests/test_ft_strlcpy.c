@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_strlcpy.c                                  :+:      :+:    :+:   */
+/*   test_ft_strlcat.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:35:31 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/25 11:16:03 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/28 11:51:33 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <limits.h>
@@ -15,47 +15,56 @@
 #include <string.h>
 #include "../libft.h"
 
-void	print_ok_ko(size_t comp)
+void	print_ok_ko(size_t comp, short length_test)
 {
-	if ((comp == 0))
+	if (length_test)
+		printf("Truncated YES.\n");
+	else
+		printf("Truncated  NO.\n");
+	if (comp == 0)
 		printf("\033[1;92m[OK]");
 	else
 		printf("\033[1;91m[KO]");
 	printf("\033[0m\n");
 }
 
-void	show_results(char *s, size_t s_len, char *d, size_t d_len)
+static void	test(char *dst, char *src, size_t buf_len)
 {
-	printf("copy of src >%s< ", s);
-	printf("with %ld chars ", s_len);
-	printf("into dst >%s< ", d);
-	printf("with %ld chars. ", d_len);
-	if (d_len < s_len)
-		printf("Truncated YES.\n");
-	else
-		printf("Truncated  NO.\n");
+	char	*mybuf;
+	char	*yobuf;
+	size_t	mybuf_len;
+	size_t	yobuf_len;
+
+	mybuf = (char *)malloc(buf_len);
+	yobuf = (char *)malloc(buf_len);
+	mybuf = strcpy(mybuf, dst);
+	yobuf = strcpy(yobuf, dst);
+	mybuf_len = ft_strlcpy(mybuf, src, buf_len);
+	yobuf_len = strlcpy(yobuf, src, buf_len);
+	printf("concat src >%s< ", src);
+	printf("(%ld) ", mybuf_len);
+	printf("into dst >%s< ", dst);
+	printf("(%ld) ", buf_len);
+	printf("=  >%s< . ", mybuf);
+	print_ok_ko(ft_memcmp(mybuf, yobuf, buf_len), (mybuf_len > buf_len));
+	free(mybuf);
+	free(yobuf);
 }
 
 int	main(int argc, char **argv)
 {
 	char	*src;
-	size_t	src_len;
 	char	*dst;
-	size_t	dst_len;
+	size_t	buf_len;
 
-	if (argc != 3)
-		printf("Usage ./test_ft_strlcpy src dst_len");
+	if (argc != 4)
+		printf("Usage ./test_ft_strlcpy dst src buf_len");
 	else
 	{
-		src = argv[1];
-		dst_len = (size_t)atoi(argv[2]);
-		dst = (char *)malloc(dst_len + 1);
-		src_len = 0;
-		while (src_len < dst_len)
-			dst[src_len++] = 'a';
-		src_len = ft_strlcpy(dst, src, dst_len);
-		show_results(src, src_len, dst, dst_len);
-		free(dst);
+		src = argv[2];
+		dst = argv[1];
+		buf_len = (size_t)atoi(argv[3]);
+		test(dst, src, buf_len);
 	}
 	return (0);
 }
