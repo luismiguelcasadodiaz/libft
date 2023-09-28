@@ -20,8 +20,8 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 |08| [ft_bzero](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_bzero.c)| 23 09 19|
 |09| [ft_memcpy](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memcpy.c)| 23 09 19|
 |10| [ft_memmove](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memmove.c)| 23 09 19 |
-|11| [ft_strlcpy](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strlcpy.c)| 23 39 25 KO |
-|12| [ft_strlcat](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strlcat.c)| 23 09 25 KO |
+|11| [ft_strlcpy](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strlcpy.c)| 23 39 25|
+|12| [ft_strlcat](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strlcat.c)| 23 09 25|
 |13| [ft_toupper](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_toupper.c)| 23 09 22|
 |14| [ft_tolower](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_tolower.c)| 23 09 22|
 |15| [ft_strchr](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strchr.c)| 23 09 22|
@@ -29,7 +29,7 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 |17| [ft_strncmp](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strncmp.c)| 23 09 23|
 |18| [ft_memchr](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memchr.c)| 23 09 20|
 |19| [ft_memcmp](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_memcmp.c)| 23 09 20|
-|20| [ft_strnstr](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strnstr.c)| 23 09 25 KO |
+|20| [ft_strnstr](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strnstr.c)| 23 09 25 |
 |21| [ft_atoi](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_atoi.c)| 23 09 23|
 |22| [ft_calloc](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_calloc.c)| 23 09 24|
 |23| [ft_strdup](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strdup.c)| 23 09 24|
