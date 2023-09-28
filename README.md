@@ -37,8 +37,8 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 ## Additional functions
 |num| Function |Status|
 |---|:---------:|--------|
-|24| [ft_substr](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_substr.c)| 23 09 25 KO |
-|25| [ft_strjoin](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strjoin.c)| 23 09 25 |
+|24| [ft_substr](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_substr.c)| 23 09 25|
+|25| [ft_strjoin](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strjoin.c)| 23 09 25 KO |
 |26| [ft_strtrim]()| KO |
 |27| [ft_split]()| KO |
 |28| [ft_itoa]()| KO |
