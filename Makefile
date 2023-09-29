@@ -3,7 +3,7 @@
 
 NAME = libft.a
 CC = cc
-CFLAGS = -Wall -Wextra  -Werror
+CFLAGS = -g -Wall -Wextra  -Werror
 
 # From 4.4.3 The Function wildcard gnu make manual....
 # Althought wildcard exparnds automaticaly in rules
@@ -76,6 +76,7 @@ all: $(NAME)
 #   Therefore, rcs can be seen to mean replace, create, sort
 
 $(NAME): $(OBJS)
+	@echo "================ GATHERING ALL OBJECTS ====================="
 	ar rcs $(NAME) $?
 
 # For each c file create its object file.
@@ -92,17 +93,23 @@ $(NAME): $(OBJS)
 #Makefile:fclean
 
 # removes all generated object files
+.PHONY: clean
 clean:
+	@echo "================ REMOVING ALL OBJECTS ======================"
 	rm -f *.o
 
 # removes target file and all generated object files
+.PHONY: fclean
 fclean: clean
+	@echo "================ REMOVING TARGET =========================="
 	rm -f $(NAME)
 
 # rebuild all after removing all
+.PHONY: re
 re: fclean all
-
+	@echo "================ REBUILDING ==============================="
 norma: $(SRCS)
+	@echo "================ CHECKING NORME ==========================="
 	norminette $(SRCS)
 
 
