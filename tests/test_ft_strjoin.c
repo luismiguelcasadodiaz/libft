@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:35:31 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/25 19:51:46 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/29 10:08:15 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int	main(int argc, char **argv)
 	else
 	{
 		pre = argv[1];
-		suf = argv[2];
+		suf = pre + 20;
 		printf("pre = >%s<, ", pre);
-		printf("suf = >%s<, ", suf);
-		printf("substr >%s<\n", ft_strjoin(pre, suf));
+		printf("suf = >%s<, ", suf + 20);
+		printf("substr >%s<\n", ft_strjoin(suf, pre));
 	}
 	return (0);
 }

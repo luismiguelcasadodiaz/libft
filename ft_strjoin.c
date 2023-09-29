@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/25 22:47:59 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/09/29 10:28:59 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -30,15 +30,19 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	size;
+	size_t	s1_size;
+	size_t	s2_size;
+	size_t  s1s2_size;
 	char	*join;
 
-	size = ft_strlen(s1) + ft_strlen(s2);
-	join = (char *)malloc(size + 1);
+	s1_size = ft_strlen(s1);
+    s2_size = ft_strlen(s2);
+	s1s2_size = s1_size + s2_size + 1;
+	join = (char *)malloc(s1s2_size);
 	if (join != NULL)
 	{
-		ft_strlcpy(join, s1, size);
-		ft_strlcat(join, s2, size);
+		ft_strlcpy(join, s1, s1_size + 1);
+		ft_strlcat(join, s2, s1s2_size);
 	}
 	return (join);
 }
