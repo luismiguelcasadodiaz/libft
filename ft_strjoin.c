@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/02 17:26:56 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/02 19:13:47 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -31,11 +31,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	s1_size;
 	size_t	s2_size;
-	size_t		s1s2_size;
+	size_t	s1s2_size;
 	char	*join;
 
 	if (!s1 || !s2)
-	   return (NULL);	
+		return (NULL);
 	s1_size = ft_strlen(s1);
 	s2_size = ft_strlen(s2);
 	s1s2_size = s1_size + s2_size + 1;
