@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:35:31 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/02 10:26:54 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/02 11:15:39 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <string.h>
 #include "../libft.h"
 
-char	*test_empty()
+char	*test_empty(void)
 {
 	char			*src;
 	char			*set;
@@ -33,6 +33,8 @@ int	main(int argc, char **argv)
 {
 	char			*src;
 	char			*set;
+	char			*result;
+
 	if (argc != 3)
 		printf("Usage ./test_ft_strtrim str set");
 	else
@@ -41,9 +43,13 @@ int	main(int argc, char **argv)
 		set = argv[2];
 		printf("src = >%s<, ", src);
 		printf("set = >%s<, ", set);
-		printf("tri >%s<\n", ft_strtrim(src, set));
+		result = ft_strtrim(src, set);
+		printf("tri >%s<\n", result);
+		free(result);
 		printf("src = >\\0<, ");
-		printf("tri >%s<,\n", test_empty());
+		result = test_empty();
+		printf("tri >%s<,\n", result);
+		free(result);
 	}
 	return (0);
 }
