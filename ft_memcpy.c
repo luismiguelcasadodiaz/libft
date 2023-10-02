@@ -6,20 +6,11 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/28 17:28:53 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/02 19:10:24 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-/* this function helps me to pass paco test as he wants a gesfault when big   */
-/* is null                                                                    */
-       
-/*static void	force_segfault(void)
-{
-	int	*p;
-	p = NULL;
-	*p = 1;
-} */  
 /* The memcpy() function copies n bytes from memory area src to memory area   */
 /* dst.  If dst and src overlap, behavior is undefined.  Applications in      */
 /*     which dst and src might overlap should use memmove(3) instead.         */
