@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 01:03:05 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/26 10:38:06 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/02 12:31:11 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -40,4 +40,5 @@ int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+char	**ft_split(char const *s, char c);
 #endif /* LIBFT_H */
