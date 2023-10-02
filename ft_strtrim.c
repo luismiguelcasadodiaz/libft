@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/29 18:47:32 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/02 11:04:07 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -23,6 +23,12 @@
 /*   the trimmed string or NULL if allocation fails                           */
 /*                                                                            */
 /* OPERATION                                                                  */
+/*   Check if any argument is NULL                                            */
+/*                                                                            */
+/*   Check if string s is "", then return an EMPTY TRIMMED STRING             */
+/*   Loops from the begining towards end skipping chars in set. When detects  */
+/*                                                                            */
+/*                                                                            */
 /*   Loops from the begining towards end skipping chars in set. When detects  */
 /*   the first no-set-belonging char, keeps index in variable s_ini.          */
 /*                                                                            */
@@ -33,9 +39,13 @@
 /*                                                                            */
 /*   s_end - s_ini + 1 equals the num of chars to keep.                       */
 /*                                                                            */
-/*   Into the new allocated memory i copy trimmed part of s                   */
+/*   Extract a sub-string from s starting in s_ini with num char to keep      */
 /*                                                                            */
-/*  Null/terminate t and return it                                            */
+/* PROBLEMS I GOT                                                             */
+/*                                                                            */
+/*  Memory problem from soares tests when s=""                                */
+/*                                                                            */
+/*                                                                            */
 /*                                                                            */
 char	*ft_strtrim(char const *s, char const *set)
 {
@@ -46,18 +56,18 @@ char	*ft_strtrim(char const *s, char const *set)
 
 	if (!s || !set)
 		return (NULL);
-	if (s[0] == '\0' && set[0] == '\0')
+	if (s[0] == '\0')
 	{
-		t= (char *)malloc(sizeof(char));
+		t = (char *)malloc(sizeof(char));
 		t[0] = '\0';
 		return (t);
 	}
 	s_len = ft_strlen(s);
 	s_ini = 0;
-	while ((s_ini <= s_len) && (ft_strchr(set, s[s_ini]) != NULL))
+	while (s[s_ini] != '\0' && (ft_strchr(set, s[s_ini]) != NULL))
 		s_ini++;
 	s_end = s_len - 1;
-	while ((0 <= s_end) && (ft_strchr(set, s[s_end]) != NULL))
+	while (s[s_end] != '\0' && (ft_strchr(set, s[s_end]) != NULL))
 		s_end--;
 	t = ft_substr(s, s_ini, (s_end - s_ini + 1));
 	return (t);
