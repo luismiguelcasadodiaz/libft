@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/22 19:17:56 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/02 19:18:07 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,7 +22,7 @@
 /* ft_strchr() function returnis a pointer to the matched character or NULL   */
 /* if the character is not found.                                             */
 /* The terminating null byte is considered part of the string, so that if c   */
-/* is specified as '\0', these functions return a pointer to the terminator   */
+/* is specified as null byte, returns a pointer to the terminator.            */
 char	*ft_strchr(const char *s, int c)
 {
 	size_t			idx;
