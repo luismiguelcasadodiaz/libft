@@ -41,8 +41,8 @@ SRCS = ft_isalnum.c \
        ft_substr.c \
        ft_strjoin.c \
        ft_split.c \
-#      ft_itoa.c \
-       ft_putchar_fd.c \
+       ft_itoa.c \
+#      ft_putchar_fd.c \
        ft_putendl_fd.c \
        ft_putnbr_fd.c \
        ft_striteri.c \
