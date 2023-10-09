@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 13:37:18 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/02 15:52:04 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:54:38 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <string.h>
 #include "../libft.h"
 
-char	*test_empty(void)
+char	**test_empty(void)
 {
 	char			*src;
 	char			*set;
@@ -26,17 +26,25 @@ char	*test_empty(void)
 	set = (char *)malloc(sizeof(char));
 	src_len = ft_strlcpy(src, "", 1);
 	set_len = ft_strlcpy(set, "", 1);
-	return (ft_strtrim(src, set));
+	if (src_len || set_len)
+		printf(" ");
+	return (ft_split(src, *set));
 }
 
 void	show_words(char	**words)
 {
-		size_t	i;
+	size_t	i;
 
+	if (words)
+	{
 		i = 0;
-		while (words[i] == NULL)
+		while (words[i] != NULL)
 			printf(">%s<\n", words[i++]);
+	}
+	else
+		printf("Nothing to print\n");
 }
+
 int	main(int argc, char **argv)
 {
 	char			*src;
@@ -52,6 +60,10 @@ int	main(int argc, char **argv)
 		printf("src = >%s<, ", src);
 		printf("set = >%s<,\n", set);
 		result = ft_split(src, *set);
+		show_words(result);
+		free(result);
+		result = test_empty();
+		show_words(result);
 		free(result);
 	}
 	return (0);

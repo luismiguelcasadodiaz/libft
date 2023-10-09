@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/02 18:59:43 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/09 16:45:47 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -70,25 +70,26 @@ static char	**addword(char *word, char **mem, size_t mem_size)
 }
 */
 
-size_t	word_count(char const *s, char c)
+static size_t	word_count(char const *s, char c)
 {
 	size_t	counter;
-	size_t	idx;
+	size_t	i;
 	short	in_word;
-	
-	idx = 0;
-	counter = 1;
+
+	i = 0;
+	while (s[i] != '\0' && s[i] == c)
+		i++;
+	counter = 0;
 	in_word = 1;
-	while (s[idx] != '\0')
+	while (s[i] != '\0')
 	{
-		if (s[idx] == c && in_word)
+		if (s[i] == c && in_word)
 			in_word = 0;
-		if (s[idx] != c && !in_word)
+		if (s[i++] != c && !in_word)
 		{
 			counter = counter +1;
 			in_word = 1;
 		}
-		idx++;
 	}
 	return (counter);
 }
@@ -121,36 +122,28 @@ size_t	word_count(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	char	*trimmed;
 	size_t	i;
 	size_t	j;
 	size_t	word_counter;
 
 	if (!s || !c)
 		return (NULL);
-	trimmed = ft_strtrim(s, &c);
-	word_counter = word_count(s, c);
-	if (word_counter == 0)
-		return (allocate(0));		
-	result = allocate(word_counter);
+	result = allocate(word_count(s, c));
 	word_counter = 0;
 	i = 0;
-	while (trimmed[i] != '\0')
+	while (s[i] != '\0')
 	{
 		j = i;
-		while (ft_strchr(&c, trimmed[j]) == NULL)
+		while (ft_strchr(&c, s[j]) == NULL)
 			j++;
-		result[word_counter] = ft_substr(trimmed, i, (j - i));
-		word_counter = word_counter + 1;
-		while (trimmed[j] != '\0' && ft_strchr(&c, trimmed[j]) != NULL)
+		if (j != i)
+		{
+			result[word_counter] = ft_substr(s, i, (j - i));
+			word_counter = word_counter + 1;
+		}
+		while (s[j] != '\0' && ft_strchr(&c, s[j]) != NULL)
 			j++;
 		i = j;
 	}
-/*	if (trimmed[j] == '\0')
-	{
-		result[word_counter] = ft_substr(trimmed, i, (j - i));
-	}
-	*/
-	free(trimmed);
 	return (result);
 }
