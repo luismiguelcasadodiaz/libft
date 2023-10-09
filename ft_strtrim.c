@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/02 11:04:07 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/09 19:22:27 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -59,7 +59,8 @@ char	*ft_strtrim(char const *s, char const *set)
 	if (s[0] == '\0')
 	{
 		t = (char *)malloc(sizeof(char));
-		t[0] = '\0';
+		if (t)
+			t[0] = '\0';
 		return (t);
 	}
 	s_len = ft_strlen(s);
