@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/09 14:29:00 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/09 19:33:18 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -79,7 +79,7 @@ static void	add_digit(char c, char **str, size_t *str_size)
 		*str = new_str;
 	}
 	else
-		*str = NULL;
+		*str = new_str;
 }
 
 /* ************************************************************************** */
@@ -162,13 +162,19 @@ char	*ft_itoa(int n)
 	char	*str;
 	size_t	str_size;
 
-	str = create_empty_string(&str_size);
 	if (n == 0)
+	{
+		str = create_empty_string(&str_size);
 		add_digit('0', &str, &str_size);
+	}
 	else if (n > 0)
+	{
+		str = create_empty_string(&str_size);
 		aux_itoa(n, &str, &str_size);
+	}
 	else
 	{
+		str = create_empty_string(&str_size);
 		add_digit('-', &str, &str_size);
 		aux_itoa(n, &str, &str_size);
 	}
