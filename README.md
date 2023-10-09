@@ -41,22 +41,23 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 |25| [ft_strjoin](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strjoin.c)| 23 09 29|
 |26| [ft_strtrim](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strtrim.c)| 23 10 02|
 |27| [ft_split](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_split.c)| KO |
-|28| [ft_itoa]()| KO |
+|28| [ft_itoa](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_itoa.c)| 23 10 09|
 |29| [ft_strmapi]()| KO |
 |30| [ft_striteri]()| KO |
-|31| [ft_putchar_fd]()| KO |
-|32| [ft_putendl_fd]()| KO |
-|33| [ft_putnbr_fd]()| KO |
+|31| [ft_putchar_fd](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_putchar_fd.c)| 23 10 09|
+|32| [ft_putstr_fd](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_putstr_fd.c)| 23 10 09 |
+|33| [ft_putendl_fd](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_putendl_fd.c)| 23 10 09|
+|34| [ft_putnbr_fd](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_putnbr_fd.c)| 23 10 09|
 
 ##   Bonus Part
 |num| Function |Status|
 |---|:---------:|--------|
-|34| [ft_lstnew]()| KO |
-|35| [ft_lstadd_front]()| KO |
-|36| [ft_lstsize]()| KO |
-|37| [ft_lstlast]()| KO |
-|38| [ft_lstadd_back]()| KO |
-|39| [ft_lstdelone]()| KO |
-|40| [ft_lstclear]()| KO |
-|41| [ft_lstiter]()| KO |
-|42| [ft_lstmap]()| KO |
+|35| [ft_lstnew]()| KO |
+|36| [ft_lstadd_front]()| KO |
+|37| [ft_lstsize]()| KO |
+|38| [ft_lstlast]()| KO |
+|39| [ft_lstadd_back]()| KO |
+|40| [ft_lstdelone]()| KO |
+|41| [ft_lstclear]()| KO |
+|42| [ft_lstiter]()| KO |
+|43| [ft_lstmap]()| KO |

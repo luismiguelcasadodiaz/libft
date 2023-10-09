@@ -42,10 +42,11 @@ SRCS = ft_isalnum.c \
        ft_strjoin.c \
        ft_split.c \
        ft_itoa.c \
-#      ft_putchar_fd.c \
+       ft_putchar_fd.c \
+       ft_putstr_fd.c \
        ft_putendl_fd.c \
        ft_putnbr_fd.c \
-       ft_striteri.c \
+  #    ft_striteri.c \
        ft_strmapi.c \
 
 #BONUS_SRCS = ft_lstadd_back.c \
@@ -67,7 +68,9 @@ OBJS = $(patsubst %.c, %.o, $(SRCS))
 # This is the reason for writtting this rule the first one
 
 
-all:  $(NAME) 
+all: $(NAME)
+
+
 # Vous devez utiliser la commande ar pour créer votre bibliothèque
 # NOTE rcs:
 # - r  means that if the library already exists, replace the old files within the library with your new files. 
@@ -79,19 +82,11 @@ $(NAME): $(OBJS)
 	@echo "================ GATHERING ALL OBJECTS ====================="
 	ar rcs $(NAME) $?
 
+
 # For each c file create its object file.
-# This was my first option ....
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ 
-
-# but after reading Norm V4 point III.11 Makefile.....
-# All source files you need to compile your project must be explicitly named in your Makefile.
-# ... I elaborated this second option.
-
-# if any change un Makefile then rebuil
-#.PHONY: Makefile
-#Makefile:fclean
 
 # removes all generated object files
 .PHONY: clean
