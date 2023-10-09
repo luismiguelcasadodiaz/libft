@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/03 18:16:53 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:32:20 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -53,7 +53,7 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	size_t	str_len;
 
 	if (!str)
-		return(NULL);
+		return (NULL);
 	sub_len = 0;
 	str_len = ft_strlen(str);
 	if (start < str_len)

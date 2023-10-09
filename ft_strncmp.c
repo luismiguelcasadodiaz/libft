@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/27 20:12:16 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/09 08:59:59 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -33,16 +33,12 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*ucs1;
 	unsigned char	*ucs2;
-	size_t			s1n;
-	size_t			s2n;
 	size_t			i;
 
 	if (n)
 	{
 		ucs1 = (unsigned char *) s1;
 		ucs2 = (unsigned char *) s2;
-		s1n = ft_strlen(s1);
-		s2n = ft_strlen(s2);
 		i = 0;
 		while (i < n && s1[i] != '\0' && s2[i] != '\0' && ucs1[i] == ucs2[i])
 			i++;
