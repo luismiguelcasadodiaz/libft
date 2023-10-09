@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 19:30:42 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/03 20:49:04 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/09 09:53:09 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 	char	*str;
 
 	if (argc != 2)
-		printf("Usage ./test_ft_ita num");
+		printf("Usage ./test_ft_itoa num");
 	else
 	{
 		num = (size_t)ft_atoi(argv[1]);
