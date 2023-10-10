@@ -47,22 +47,27 @@ SRCS = ft_isalnum.c \
        ft_putendl_fd.c \
        ft_putnbr_fd.c \
        ft_strmapi.c \
-       ft_striteri.c \
+       ft_striteri.c
 
-#BONUS_SRCS = ft_lstadd_back.c \
-             ft_lstadd_front.c \
-             ft_lstclear.c \
-             ft_lstdelone.c \
-             ft_lstiter.c \
-             ft_lstlast.c \
-             ft_lstmap.c \
-             ft_lstnew.c \
-             ft_lstsize.c \
+
+BONUS_SRCS = ft_lstnew.c \
+			 ft_lstadd_front.c \
+			 ft_lstsize.c \
+			 #ft_lstadd_back.c \
+
+
+#vft_lstadd_back.c \
+#ft_lstclear.c \
+#             	ft_lstdelone.c \
+#             	ft_lstiter.c \
+#             	ft_lstlast.c \
+#             	ft_lstmap.c \
+#             	ft_lstsize.c \
 
 # Generate a list of object files by replacing .c with .o
 
 OBJS = $(patsubst %.c, %.o, $(SRCS))
-#BONUS_OBJS = $(patsubst %.c, %.o, $(BONUS_SRCS))
+BONUS_OBJS = $(patsubst %.c, %.o, $(BONUS_SRCS))
 
 # The default goal is the first target of the first rule in the first makefile.
 # This is the reason for writtting this rule the first one
@@ -117,17 +122,23 @@ norma: $(SRCS)
 # Les bonus doivent être dans un fichier différent : _bonus.{c/h}.
 # There is a contradiciton between french version and english version
 # Add structure s_list  declaration to your libft.h file:
+bonus: $(BONUS_OBJS) 
+	ar rcs $(NAME) $(BONUS_OBJS)
+
+
+# FUMADA DE LMCD
 #bonus: bonus_setup $(BONUS_OBJS) bonus_restore
 #	ar rcs $(NAME) $(BONUS_OBJS)
-
 #bonus_setup:
+#	@echo "======= ADDING STRUCT s_list DECLARATION TO libft.h ========"
 #	head -14 libft.h > tirame.h
 #	echo "typedef struct s_list\n{\n\tvoid\t\t\t*content;\n\tstruct s_list\t*next;\n}\t\t\tt_list;\n" >> tirame.h
 #	tail -6 libft.h >> tirame.h
 #	mv libft.h libft.h.bck
 #	mv tirame.h libft.h
-
+#
 #bonus_restore:
+#	@echo "======= RESTORING libft.h removes struct s_list  ========"
 #	mv libft.h.bck libft.h
 
 %.o: %.c
