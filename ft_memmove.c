@@ -6,21 +6,11 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:54 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/28 16:55:18 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/10 09:13:58 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-/* this function helps me to pass paco test as he wants a gesfault when big   */
-/* is null                                                                    */
-/*     
-static void	force_segfault(void)
-{
-	int	*p;
-	p = NULL;
-	*p = 1;
-}
-  */ 
 /* The ft_memmove() function copies len bytes from string src to string dst.  */
 /* The two strings may overlap; the copy is always done in a non-destructive  */
 /* manner.                                                                    */
