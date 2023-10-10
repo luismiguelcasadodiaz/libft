@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/09 19:33:18 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/10 09:16:01 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -27,7 +27,7 @@ static char	*create_empty_string(size_t	*str_size)
 
 	*str_size = 0;
 	str = (char *)malloc(1 * sizeof(char));
-	if (str)
+	if (str != NULL)
 	{
 		str[0] = '\0';
 		*str_size = 1;
@@ -123,7 +123,7 @@ static void	aux_itoa(int n, char **str, size_t *str_size)
 		num = 48 + n % 10;
 		add_digit(num, &(*str), str_size);
 	}
-	else 
+	else
 	{
 		if (n < -9)
 			aux_itoa(n / 10, str, str_size);
