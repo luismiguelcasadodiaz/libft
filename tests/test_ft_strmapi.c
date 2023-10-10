@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 13:37:18 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/10 00:18:34 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/10 10:28:11 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,15 @@
 #include <string.h>
 #include "../libft.h"
 
-
-char my_toupper(unsigned int i, char c)
+char	my_toupper(unsigned int i, char c)
 {
-     if (i)
+	if (i)
 	{
-	 if ('a' <= c && c <= 'z')
-         return (c - 32);
-     }
-	 return (c);
- }
+		if ('a' <= c && c <= 'z')
+			return (c - 32);
+	}
+	return (c);
+}
 
 void	show_words(char	*words)
 {

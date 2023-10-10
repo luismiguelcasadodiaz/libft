@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:35:31 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/27 18:24:18 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/10 10:42:23 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <limits.h>
@@ -24,28 +24,38 @@ void	print_ok_ko(size_t comp)
 	printf("\033[0m\n");
 }
 
-void	show_results(char *s, size_t s_len, char *d, size_t d_len, char *x)
+void	test(char *src, char *dst, size_t buf_len)
 {
-	printf("concat src >%s< ", s);
-	printf("(%ld) ", s_len);
-	printf("into dst >%s< ", d);
-	printf("(%ld) ", d_len);
-	printf("=  >%s< . ", x);
-	if (d_len < s_len)
+	char	*mybuf;
+	char	*yobuf;
+	size_t	mybuf_len;
+	size_t	yobuf_len;
+
+	mybuf = (char *)malloc(buf_len);
+	yobuf = (char *)malloc(buf_len);
+	mybuf = strcpy(mybuf, dst);
+	yobuf = strcpy(yobuf, dst);
+	mybuf_len = ft_strlcat(mybuf, src, buf_len);
+	yobuf_len = strlcat(yobuf, src, buf_len);
+	printf("concat src >%s< ", src);
+	printf("(%ld) ", ft_strlen(src));
+	printf("into dst >%s< ", dst);
+	printf("(%ld) ", ft_strlen(dst));
+	printf("=  >%s< . ", mybuf);
+	if (ft_strlen(dst) < ft_strlen(src))
 		printf("Truncated YES.\n");
 	else
 		printf("Truncated  NO.\n");
+	print_ok_ko(ft_memcmp(mybuf, yobuf, buf_len));
+	free(mybuf);
+	free(yobuf);
 }
 
 int	main(int argc, char **argv)
 {
 	char	*src;
 	char	*dst;
-	char	*mybuf;
-	char	*yobuf;
 	size_t	buf_len;
-	size_t	mybuf_len;
-	size_t	yobuf_len;
 
 	if (argc != 4)
 		printf("Usage ./test_ft_strlcat dst src buf_len");
@@ -54,16 +64,7 @@ int	main(int argc, char **argv)
 		src = argv[2];
 		dst = argv[1];
 		buf_len = (size_t)atoi(argv[3]);
-		mybuf = (char *)malloc(buf_len);
-		yobuf = (char *)malloc(buf_len);
-		mybuf = strcpy(mybuf, dst);
-		yobuf = strcpy(yobuf, dst);
-		mybuf_len = ft_strlcat(mybuf, src, buf_len);
-		yobuf_len = strlcat(yobuf, src, buf_len);
-		show_results(src, ft_strlen(src), dst, ft_strlen(dst), mybuf);
-		print_ok_ko(ft_memcmp(mybuf, yobuf, buf_len));
-		free(mybuf);
-		free(yobuf);
+		test(src, dst, buf_len);
 	}
 	return (0);
 }
