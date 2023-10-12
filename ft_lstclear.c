@@ -6,12 +6,14 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/12 16:16:36 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/12 16:22:29 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-/* ft_lstlast() returns the last node of the list.                            */
+/* ft_lstclear() deletes and frees the given node and every successor of that */
+/* node, using the funciton 'del' and free. Finally the pointer to the list   */
+/* must be set to null.                                                       */
 /*                                                                            */
 /* GETS                                                                       */
 /*  *lst : The address of a pointer to a node.                                */
