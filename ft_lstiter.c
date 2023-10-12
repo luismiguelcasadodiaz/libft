@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/12 16:31:03 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/12 16:35:39 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -25,12 +25,8 @@
 /*                                                                            */
 /*   loops the list while there is a node to loop throu                       */
 /*                                                                            */
-/*   Inside the while 'actual' keeps the address of node.                     */
-/*   'lst' moves to next node of actual to check again the while condition.   */
-/*   At list end, lst will get NULL, as required in the specification.        */
-/*                                                                            */
-/*   calls del function to remove actual's content.                           */
-/*   release actual memory                                                    */
+/*  Apply 'f' function to actual node's content.                              */
+/*  Advance to next node.                                                     */
 /*                                                                            */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
