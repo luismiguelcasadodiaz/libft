@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:02:55 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/09 14:32:20 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/12 09:48:25 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -64,10 +64,9 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 			sub_len = len;
 	}
 	sub = (char *)malloc(sub_len + 1);
-	if (sub != NULL)
-	{
-		sub = (char *)ft_memcpy(sub, (str + start), sub_len);
-		*(sub + sub_len) = '\0';
-	}
+	if (sub == NULL)
+		return (NULL);
+	sub = (char *)ft_memcpy(sub, (str + start), sub_len);
+	*(sub + sub_len) = '\0';
 	return (sub);
 }
