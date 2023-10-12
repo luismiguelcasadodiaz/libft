@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 09:35:31 by luicasad          #+#    #+#             */
-/*   Updated: 2023/09/25 11:18:59 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/11 19:05:16 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void	show(char *src, size_t src_len)
 	char	buf[src_len];
 
 	strcpy(buf, src);
-	printf("src      = >%s< \n", src);
-	printf("len  src = >%ld<\n", strlen(src));
-	printf("size src = >%ld<\n", sizeof(src));
-	printf("buf      = >%s< \n", buf);
-	printf("len  buf = >%ld<\n", strlen(buf));
-	printf("size buf = >%ld<\n", sizeof(buf));
+	printf("*src      = >%s< \n", src);
+	printf("len  *src = >%ld<\n", strlen(src));
+	printf("size *src = >%ld<\n", sizeof(src));
+	printf("buf[]      = >%s< \n", buf);
+	printf("len  buf[] = >%ld<\n", strlen(buf));
+	printf("size buf[] = >%ld<\n", sizeof(buf));
 }
 
 int	main(int argc, char **argv)
