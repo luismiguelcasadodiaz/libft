@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 13:37:18 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/09 15:54:38 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/12 10:36:09 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ char	**test_empty(void)
 	if (src_len || set_len)
 		printf(" ");
 	return (ft_split(src, *set));
+}
+
+char	**test_paco(void)
+{
+	return (ft_split("\0aa\0bbb", '\0'));
 }
 
 void	show_words(char	**words)
@@ -62,9 +67,9 @@ int	main(int argc, char **argv)
 		result = ft_split(src, *set);
 		show_words(result);
 		free(result);
-		result = test_empty();
-		show_words(result);
-		free(result);
+		//result = test_paco();
+		//show_words(result);
+		//free(result);
 	}
 	return (0);
 }

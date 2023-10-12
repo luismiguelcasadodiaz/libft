@@ -1,0 +1,173 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                Welcome to Francinette, a 42 tester framework!                ║
+╚═══════════════════════╦══════════════════════════════╦═══════════════════════╝
+                        ║             libft            ║
+                        ╚══════════════════════════════╝
+⠋ Preparing framework⠙ Preparing framework⠹ Preparing framework⠸ Preparing framework⠼ Preparing framework⠴ Preparing framework⠦ Preparing framework⠧ Preparing framework⠇ Preparing framework✔ Preparing framework
+⠋ Executing: make fclean all bonus⠙ Executing: make fclean all bonus⠹ Executing: make fclean all bonus⠸ Executing: make fclean all bonus⠼ Executing: make fclean all bonus⠴ Executing: make fclean all bonus⠦ Executing: make fclean all bonus⠧ Executing: make fclean all bonus⠇ Executing: make fclean all bonus⠏ Executing: make fclean all bonus⠋ Executing: make fclean all bonus⠙ Executing: make fclean all bonus⠹ Executing: make fclean all bonus⠸ Executing: make fclean all bonus⠼ Executing: make fclean all bonus⠴ Executing: make fclean all bonus⠦ Executing: make fclean all bonus⠧ Executing: make fclean all bonus⠇ Executing: make fclean all bonus✔ Executing: make fclean all bonus
+ℹ Executing: libft-war-machine (https://github.com/y3ll0w42/libft-war-machine)
+
+[1m[34mFUNCTION[18GTESTS[39GRESULT
+[0m[36mft_split[18G[31m✗[0m[31m✗[0m[31m✗[0m[31m✗[0m[31m✗[0m[31m✗[0m[39G[31mKO
+[0m
+Abort: A  Bus error: B  Segmentation fault: S  Timeout: T
+
+More information in: /home/luis/francinette/temp/libft/war-machine/deepthought
+
+Errors in split: /home/luis/francinette/temp/libft/war-machine/tests/Part2_functions/ft_split
+Test 1:
+    if (!(tabstr = ft_split("          ", ' ')))
+        ft_print_result("NULL");
+    else
+    {
+        while (tabstr[i] != NULL)
+        {
+            ft_print_result(tabstr[i]);
+            write(1, "\n", 1);
+            i++;
+        }
+    }
+Expected (cat -e test01.output):
+
+Your result (cat -e user_output_test01):
+NULL
+Test 2:
+    if (!(tabstr = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ')))
+        ft_print_result("NULL");
+    else
+    {
+        while (tabstr[i] != NULL)
+        {
+            ft_print_result(tabstr[i]);
+            write(1, "\n", 1);
+            i++;
+        }
+    }
+Expected (cat -e test02.output):
+lorem$
+ipsum$
+dolor$
+sit$
+amet,$
+consectetur$
+adipiscing$
+elit.$
+Sed$
+non$
+risus.$
+Suspendisse$
+
+Your result (cat -e user_output_test02):
+NULL
+Test 3:
+    if (!(tabstr = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ')))
+        ft_print_result("NULL");
+    else
+    {
+...
+
+File too large. To see full report open: /home/luis/francinette/temp/libft/war-machine/errors.log
+
+⠋ Compiling tests: libftTester (https://github.com/Tripo (...)⠙ Compiling tests: libftTester (https://github.com/Tripo (...)⠹ Compiling tests: libftTester (https://github.com/Tripo (...)⠸ Compiling tests: libftTester (https://github.com/Tripo (...)⠼ Compiling tests: libftTester (https://github.com/Tripo (...)⠴ Compiling tests: libftTester (https://github.com/Tripo (...)⠦ Compiling tests: libftTester (https://github.com/Tripo (...)⠧ Compiling tests: libftTester (https://github.com/Tripo (...)⠇ Compiling tests: libftTester (https://github.com/Tripo (...)⠏ Compiling tests: libftTester (https://github.com/Tripo (...)⠋ Compiling tests: libftTester (https://github.com/Tripo (...)⠙ Compiling tests: libftTester (https://github.com/Tripo (...)⠹ Compiling tests: libftTester (https://github.com/Tripo (...)⠸ Compiling tests: libftTester (https://github.com/Tripo (...)⠼ Compiling tests: libftTester (https://github.com/Tripo (...)⠴ Compiling tests: libftTester (https://github.com/Tripo (...)⠦ Compiling tests: libftTester (https://github.com/Tripo (...)⠧ Compiling tests: libftTester (https://github.com/Tripo (...)⠇ Compiling tests: libftTester (https://github.com/Tripo (...)⠏ Compiling tests: libftTester (https://github.com/Tripo (...)⠋ Compiling tests: libftTester (https://github.com/Tripo (...)⠙ Compiling tests: libftTester (https://github.com/Tripo (...)⠹ Compiling tests: libftTester (https://github.com/Tripo (...)⠸ Compiling tests: libftTester (https://github.com/Tripo (...)⠼ Compiling tests: libftTester (https://github.com/Tripo (...)⠴ Compiling tests: libftTester (https://github.com/Tripo (...)⠦ Compiling tests: libftTester (https://github.com/Tripo (...)⠧ Compiling tests: libftTester (https://github.com/Tripo (...)⠇ Compiling tests: libftTester (https://github.com/Tripo (...)✔ Compiling tests: libftTester (https://github.com/Tripouille/libftTester)
+ℹ Testing:
+ft_split        : ⠋ft_split        : ⠙ft_split        : ⠹ft_split        : ⠸ft_split        : ⠼ft_split        : ⠴ft_split        : ⠦ft_split        : ⠧ft_split        : ⠇ft_split        : ⠏ft_split        : ⠋ft_split	: 1.MKO 2.SIGSEGV
+
+MKO: test about your malloc size (this shouldn't be tested by moulinette)
+
+Errors in:
+
+For /home/luis/francinette/tests/libft/Tripouille/tests/ft_split_test.cpp:
+MKO 26: 	/* 1 */ mcheck(tab, sizeof(char *) * 3);
+SIGSEGV 28: 	/* 2 */ check(!strcmp(tab[0], "tripouille"));
+
+⠋ Compiling tests: libft-unit-test (https://github.com/a (...)⠙ Compiling tests: libft-unit-test (https://github.com/a (...)⠹ Compiling tests: libft-unit-test (https://github.com/a (...)⠸ Compiling tests: libft-unit-test (https://github.com/a (...)⠼ Compiling tests: libft-unit-test (https://github.com/a (...)⠴ Compiling tests: libft-unit-test (https://github.com/a (...)⠦ Compiling tests: libft-unit-test (https://github.com/a (...)⠧ Compiling tests: libft-unit-test (https://github.com/a (...)⠇ Compiling tests: libft-unit-test (https://github.com/a (...)⠏ Compiling tests: libft-unit-test (https://github.com/a (...)⠋ Compiling tests: libft-unit-test (https://github.com/a (...)⠙ Compiling tests: libft-unit-test (https://github.com/a (...)⠹ Compiling tests: libft-unit-test (https://github.com/a (...)⠸ Compiling tests: libft-unit-test (https://github.com/a (...)⠼ Compiling tests: libft-unit-test (https://github.com/a (...)⠴ Compiling tests: libft-unit-test (https://github.com/a (...)⠦ Compiling tests: libft-unit-test (https://github.com/a (...)⠧ Compiling tests: libft-unit-test (https://github.com/a (...)⠇ Compiling tests: libft-unit-test (https://github.com/a (...)⠏ Compiling tests: libft-unit-test (https://github.com/a (...)⠋ Compiling tests: libft-unit-test (https://github.com/a (...)⠙ Compiling tests: libft-unit-test (https://github.com/a (...)⠹ Compiling tests: libft-unit-test (https://github.com/a (...)⠸ Compiling tests: libft-unit-test (https://github.com/a (...)⠼ Compiling tests: libft-unit-test (https://github.com/a (...)⠴ Compiling tests: libft-unit-test (https://github.com/a (...)⠦ Compiling tests: libft-unit-test (https://github.com/a (...)⠧ Compiling tests: libft-unit-test (https://github.com/a (...)⠇ Compiling tests: libft-unit-test (https://github.com/a (...)⠏ Compiling tests: libft-unit-test (https://github.com/a (...)⠋ Compiling tests: libft-unit-test (https://github.com/a (...)⠙ Compiling tests: libft-unit-test (https://github.com/a (...)⠹ Compiling tests: libft-unit-test (https://github.com/a (...)⠸ Compiling tests: libft-unit-test (https://github.com/a (...)⠼ Compiling tests: libft-unit-test (https://github.com/a (...)⠴ Compiling tests: libft-unit-test (https://github.com/a (...)⠦ Compiling tests: libft-unit-test (https://github.com/a (...)⠧ Compiling tests: libft-unit-test (https://github.com/a (...)⠇ Compiling tests: libft-unit-test (https://github.com/a (...)⠏ Compiling tests: libft-unit-test (https://github.com/a (...)⠋ Compiling tests: libft-unit-test (https://github.com/a (...)⠙ Compiling tests: libft-unit-test (https://github.com/a (...)⠹ Compiling tests: libft-unit-test (https://github.com/a (...)⠸ Compiling tests: libft-unit-test (https://github.com/a (...)⠼ Compiling tests: libft-unit-test (https://github.com/a (...)⠴ Compiling tests: libft-unit-test (https://github.com/a (...)⠦ Compiling tests: libft-unit-test (https://github.com/a (...)⠧ Compiling tests: libft-unit-test (https://github.com/a (...)⠇ Compiling tests: libft-unit-test (https://github.com/a (...)⠏ Compiling tests: libft-unit-test (https://github.com/a (...)⠋ Compiling tests: libft-unit-test (https://github.com/a (...)⠙ Compiling tests: libft-unit-test (https://github.com/a (...)⠹ Compiling tests: libft-unit-test (https://github.com/a (...)⠸ Compiling tests: libft-unit-test (https://github.com/a (...)⠼ Compiling tests: libft-unit-test (https://github.com/a (...)⠴ Compiling tests: libft-unit-test (https://github.com/a (...)⠦ Compiling tests: libft-unit-test (https://github.com/a (...)⠧ Compiling tests: libft-unit-test (https://github.com/a (...)⠇ Compiling tests: libft-unit-test (https://github.com/a (...)⠏ Compiling tests: libft-unit-test (https://github.com/a (...)⠋ Compiling tests: libft-unit-test (https://github.com/a (...)⠙ Compiling tests: libft-unit-test (https://github.com/a (...)⠹ Compiling tests: libft-unit-test (https://github.com/a (...)⠸ Compiling tests: libft-unit-test (https://github.com/a (...)⠼ Compiling tests: libft-unit-test (https://github.com/a (...)⠴ Compiling tests: libft-unit-test (https://github.com/a (...)⠦ Compiling tests: libft-unit-test (https://github.com/a (...)⠧ Compiling tests: libft-unit-test (https://github.com/a (...)⠇ Compiling tests: libft-unit-test (https://github.com/a (...)⠏ Compiling tests: libft-unit-test (https://github.com/a (...)⠋ Compiling tests: libft-unit-test (https://github.com/a (...)⠙ Compiling tests: libft-unit-test (https://github.com/a (...)⠹ Compiling tests: libft-unit-test (https://github.com/a (...)⠸ Compiling tests: libft-unit-test (https://github.com/a (...)⠼ Compiling tests: libft-unit-test (https://github.com/a (...)⠴ Compiling tests: libft-unit-test (https://github.com/a (...)⠦ Compiling tests: libft-unit-test (https://github.com/a (...)⠧ Compiling tests: libft-unit-test (https://github.com/a (...)⠇ Compiling tests: libft-unit-test (https://github.com/a (...)⠏ Compiling tests: libft-unit-test (https://github.com/a (...)⠋ Compiling tests: libft-unit-test (https://github.com/a (...)⠙ Compiling tests: libft-unit-test (https://github.com/a (...)⠹ Compiling tests: libft-unit-test (https://github.com/a (...)⠸ Compiling tests: libft-unit-test (https://github.com/a (...)⠼ Compiling tests: libft-unit-test (https://github.com/a (...)⠴ Compiling tests: libft-unit-test (https://github.com/a (...)⠦ Compiling tests: libft-unit-test (https://github.com/a (...)⠧ Compiling tests: libft-unit-test (https://github.com/a (...)⠇ Compiling tests: libft-unit-test (https://github.com/a (...)⠏ Compiling tests: libft-unit-test (https://github.com/a (...)⠋ Compiling tests: libft-unit-test (https://github.com/a (...)⠙ Compiling tests: libft-unit-test (https://github.com/a (...)⠹ Compiling tests: libft-unit-test (https://github.com/a (...)⠸ Compiling tests: libft-unit-test (https://github.com/a (...)⠼ Compiling tests: libft-unit-test (https://github.com/a (...)⠴ Compiling tests: libft-unit-test (https://github.com/a (...)⠦ Compiling tests: libft-unit-test (https://github.com/a (...)⠧ Compiling tests: libft-unit-test (https://github.com/a (...)⠇ Compiling tests: libft-unit-test (https://github.com/a (...)⠏ Compiling tests: libft-unit-test (https://github.com/a (...)⠋ Compiling tests: libft-unit-test (https://github.com/a (...)⠙ Compiling tests: libft-unit-test (https://github.com/a (...)⠹ Compiling tests: libft-unit-test (https://github.com/a (...)⠸ Compiling tests: libft-unit-test (https://github.com/a (...)⠼ Compiling tests: libft-unit-test (https://github.com/a (...)⠴ Compiling tests: libft-unit-test (https://github.com/a (...)⠦ Compiling tests: libft-unit-test (https://github.com/a (...)⠧ Compiling tests: libft-unit-test (https://github.com/a (...)⠇ Compiling tests: libft-unit-test (https://github.com/a (...)✔ Compiling tests: libft-unit-test (https://github.com/alelievr/libft-unit-test)
+ℹ Testing:
+ft_split        : [CRASH] [OK] [CRASH] [CRASH] [OK] [OK] [CRASH] [CRASH] [OK] [CRASH] 
+[crash]: your split does not work with basic input
+[crash]: your split does not work with one word
+[crash]: your split does not work with one word
+[crash]: your split will segfault in case --> *str="\0aa\0bbb" c='\0'
+[crash]: your split does not work with basic input
+[crash]: your split does not work with basic input
+
+
+[crash]: your split does not work with basic input
+ Test code:
+ 	char *string = "      split       this for   me  !       ";
+ 	char **expected = ((char*[6]){"split", "this", "for", "me", "!", ((void*)0)});
+ 	char **result = ft_split(string, ' ');
+ 
+ 	split_cmp_array(expected, result);
+ 
+ 
+ [crash]: your split does not work with one word
+ Test code:
+ 	char *s = "                  olol";
+ 	char **result = ft_split(s, ' ');
+ 
+ 	split_cmp_array(expected, result);
+ 
+ 
+ [crash]: your split does not work with one word
+ Test code:
+ 	char *s = "olol                     ";
+ 	char **result = ft_split(s, ' ');
+ 
+ 	split_cmp_array(expected, result);
+ 
+ 
+ [crash]: your split will segfault in case --> *str="\0aa\0bbb" c='\0' 
+ Test code:
+ 	char **expected = ft_split("\0aa\0bbb", '\0');
+ 
+ 	for (int i = 0; expected[i]; i++)
+ 	{
+ 		if (expected[i] != ((void*)0))
+ 			exit(TEST_FAILED);
+ 	}
+ 	exit(TEST_SUCCESS);
+ 
+ 
+ [crash]: your split does not work with basic input
+ Test code:
+ 	char *s = "split  ||this|for|me|||||!|";
+ 	int i = 0;
+ 	char **result = ft_split(s, '|');
+ 
+ 	while (result[i])
+ 	{
+ 		if (strcmp(result[i], *expected))
+ 		{
+ 			exit(TEST_FAILED);
+ 		}
+ 		free(result[i]);
+...
+
+File too large. To see full report open: /home/luis/francinette/temp/libft/alelievr/result.log
+
+⠋ Compiling tests: fsoares (my own)⠙ Compiling tests: fsoares (my own)⠹ Compiling tests: fsoares (my own)⠸ Compiling tests: fsoares (my own)⠼ Compiling tests: fsoares (my own)⠴ Compiling tests: fsoares (my own)⠦ Compiling tests: fsoares (my own)⠧ Compiling tests: fsoares (my own)⠇ Compiling tests: fsoares (my own)⠏ Compiling tests: fsoares (my own)⠋ Compiling tests: fsoares (my own)⠙ Compiling tests: fsoares (my own)⠹ Compiling tests: fsoares (my own)⠸ Compiling tests: fsoares (my own)⠼ Compiling tests: fsoares (my own)⠴ Compiling tests: fsoares (my own)⠦ Compiling tests: fsoares (my own)⠧ Compiling tests: fsoares (my own)⠇ Compiling tests: fsoares (my own)⠏ Compiling tests: fsoares (my own)⠋ Compiling tests: fsoares (my own)⠙ Compiling tests: fsoares (my own)⠹ Compiling tests: fsoares (my own)✔ Compiling tests: fsoares (my own)
+ℹ Testing:
+ft_split        : ⠋ft_split        : ⠙ft_split        : ⠹ft_split        : 1.KO Segfault
+
+⠋ Processing output⠙ Processing outputErrors found:
+For ft_split, in /home/luis/francinette/tests/libft/fsoares/test_split.c:
+
+Error in test 1: ft_split("hello!", 32:' '): Segmentation fault!
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                Welcome to Francinette, a 42 tester framework!                ║
+╚═══════════════════════╦══════════════════════════════╦═══════════════════════╝
+                        ║             libft            ║
+                        ╚══════════════════════════════╝
+⠋ Preparing framework⠙ Preparing framework⠹ Preparing framework⠸ Preparing framework⠼ Preparing framework⠴ Preparing framework⠦ Preparing framework⠧ Preparing framework⠇ Preparing framework✔ Preparing framework
+⠋ Executing: make fclean all bonus⠙ Executing: make fclean all bonus⠹ Executing: make fclean all bonus⠸ Executing: make fclean all bonus⠼ Executing: make fclean all bonus⠴ Executing: make fclean all bonus⠦ Executing: make fclean all bonus⠧ Executing: make fclean all bonus⠇ Executing: make fclean all bonus⠏ Executing: make fclean all bonus⠋ Executing: make fclean all bonus⠙ Executing: make fclean all bonus⠹ Executing: make fclean all bonus⠸ Executing: make fclean all bonus⠼ Executing: make fclean all bonus⠴ Executing: make fclean all bonus⠦ Executing: make fclean all bonus⠧ Executing: make fclean all bonus⠇ Executing: make fclean all bonus✔ Executing: make fclean all bonus
+⠋ Compiling tests: fsoares (my own)⠙ Compiling tests: fsoares (my own)⠹ Compiling tests: fsoares (my own)⠸ Compiling tests: fsoares (my own)⠼ Compiling tests: fsoares (my own)⠴ Compiling tests: fsoares (my own)⠦ Compiling tests: fsoares (my own)⠧ Compiling tests: fsoares (my own)⠇ Compiling tests: fsoares (my own)⠏ Compiling tests: fsoares (my own)⠋ Compiling tests: fsoares (my own)⠙ Compiling tests: fsoares (my own)⠹ Compiling tests: fsoares (my own)⠸ Compiling tests: fsoares (my own)⠼ Compiling tests: fsoares (my own)⠴ Compiling tests: fsoares (my own)⠦ Compiling tests: fsoares (my own)⠧ Compiling tests: fsoares (my own)⠇ Compiling tests: fsoares (my own)⠏ Compiling tests: fsoares (my own)⠋ Compiling tests: fsoares (my own)⠙ Compiling tests: fsoares (my own)⠹ Compiling tests: fsoares (my own)✔ Compiling tests: fsoares (my own)
+ℹ Testing:
+ft_split        : ⠋ft_split        : ⠙ft_split        : ⠹ft_split        : 1.KO Segfault
+
+⠋ Processing output⠙ Processing outputErrors found:
+For ft_split, in /home/luis/francinette/tests/libft/fsoares/test_split.c:
+
+Error in test 1: ft_split("hello!", 32:' '): Segmentation fault!
+
+
