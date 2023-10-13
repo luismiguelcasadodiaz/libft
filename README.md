@@ -51,7 +51,7 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 
 ##   Bonus Part
 |num| Function |Status|
-|---|:---------:|--------|
+|---|:---------|--------|
 |35| [ft_lstnew](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstnew.c)| 23 10 10|
 |36| [ft_lstadd_front](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstadd_front.c)| 23 10 10|
 |37| [ft_lstsize](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstsize.c)| 23 10 11|
