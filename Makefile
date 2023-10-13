@@ -3,7 +3,7 @@
 
 NAME = libft.a
 CC = cc
-CFLAGS = -g -Wall -Wextra  -Werror
+CFLAGS = -Wall -Wextra  -Werror
 
 # From 4.4.3 The Function wildcard gnu make manual....
 # Althought wildcard exparnds automaticaly in rules
@@ -53,16 +53,12 @@ SRCS = ft_isalnum.c \
 BONUS_SRCS = ft_lstnew.c \
 			 ft_lstadd_front.c \
 			 ft_lstsize.c \
-			 #ft_lstadd_back.c \
-
-
-#vft_lstadd_back.c \
-#ft_lstclear.c \
-#             	ft_lstdelone.c \
-#             	ft_lstiter.c \
-#             	ft_lstlast.c \
-#             	ft_lstmap.c \
-#             	ft_lstsize.c \
+			 ft_lstlast.c \
+			 ft_lstmap.c \
+			 ft_lstadd_back.c \
+			 ft_lstdelone.c \
+			 ft_lstclear.c \
+			 ft_lstiter.c \
 
 # Generate a list of object files by replacing .c with .o
 
@@ -122,13 +118,14 @@ norma: $(SRCS)
 # Les bonus doivent être dans un fichier différent : _bonus.{c/h}.
 # There is a contradiciton between french version and english version
 # Add structure s_list  declaration to your libft.h file:
-bonus: $(BONUS_OBJS) 
-	ar rcs $(NAME) $(BONUS_OBJS)
+bonus:  $(BONUS_OBJS) 
+	@echo "================ GATHERING BONUS OBJECTS ====================="
+	ar rcs $(NAME) $? 
 
 
 # FUMADA DE LMCD
 #bonus: bonus_setup $(BONUS_OBJS) bonus_restore
-#	ar rcs $(NAME) $(BONUS_OBJS)
+#	ar rs $(NAME) $(BONUS_OBJS)
 #bonus_setup:
 #	@echo "======= ADDING STRUCT s_list DECLARATION TO libft.h ========"
 #	head -14 libft.h > tirame.h
@@ -141,11 +138,13 @@ bonus: $(BONUS_OBJS)
 #	@echo "======= RESTORING libft.h removes struct s_list  ========"
 #	mv libft.h.bck libft.h
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ 
+#%.o: %.c
+#	$(CC) $(CFLAGS) -c $< -o $@ 
 
 bonus_clean:
+	@echo "================ REMOVING BONUS OBJECTS  ==================="
 	rm -f ft_lst*.o
 
 bonus_norma: $(BONUS_SRCS)
+	@echo "================ CHECKING NORME FOR BONUS ================="
 	norminette $(BONUS_SRCS)
