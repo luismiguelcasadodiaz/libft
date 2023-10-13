@@ -61,3 +61,14 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 |41| [ft_lstclear](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstclear.c)| 23 10 12|
 |42| [ft_lstiter](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstiter.c)| 23 10 12|
 |43| [ft_lstmap](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstmap.c)| 23 10 12|
+
+### Malloc summary
+[ft_calloc.c](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_calloc.c)
+[ft_itoa.c](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_itoa.c)
+[ft_lstnew.c](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstnew.c)
+[ft_split.c](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_split.c)
+[ft_strdup.c](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strdup.c)
+[ft_strjoin.c](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strjoin.c)
+[ft_strmapi.c](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strmapi.c)
+[ft_strtrim.c](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_strtrim.c)
+[ft_substr.c](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_substr.c)
