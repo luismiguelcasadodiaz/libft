@@ -86,7 +86,7 @@ $(NAME): $(OBJS)
 
 # For each c file create its object file.
 
-%.o: %.c
+%.o: %.c Makefile libft.h
 	$(CC) $(CFLAGS) -c $< -o $@ 
 
 # removes all generated object files
