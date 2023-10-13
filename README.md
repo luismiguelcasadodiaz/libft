@@ -54,8 +54,8 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 |---|:---------:|--------|
 |35| [ft_lstnew](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstnew.c)| 23 10 10|
 |36| [ft_lstadd_front](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstadd_front.c)| 23 10 10|
-|37| [ft_lstsize](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstsize.c))| 23 10 11|
-|38| [ft_lstlast](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstlast.c))| 23 10 11|
+|37| [ft_lstsize](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstsize.c)| 23 10 11|
+|38| [ft_lstlast](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstlast.c)| 23 10 11|
 |39| [ft_lstadd_back](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstadd_back.c)| 23 10 11|
 |40| [ft_lstdelone](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstdelone.c)| 23 10 12|
 |41| [ft_lstclear](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstclear.c)| 23 10 12|
