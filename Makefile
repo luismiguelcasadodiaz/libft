@@ -3,7 +3,7 @@
 
 NAME = libft.a
 CC = cc
-CFLAGS = -g -Wall -Wextra  -Werror
+CFLAGS =  -Wall -Wextra  -Werror
 
 # From 4.4.3 The Function wildcard gnu make manual....
 # Althought wildcard exparnds automaticaly in rules
@@ -61,9 +61,16 @@ BONUS_SRCS = ft_lstnew_bonus.c \
 			 ft_lstiter_bonus.c
 
 # Generate a list of object files by replacing .c with .o
-
-OBJS = $(patsubst %.c, %.o, $(SRCS))
-BONUS_OBJS = $(patsubst %.c, %.o, $(BONUS_SRCS))
+#
+# I did this approach
+#
+#OBJS = $(patsubst %.c, %.o, $(SRCS))
+#BONUS_OBJS = $(patsubst %.c, %.o, $(BONUS_SRCS))
+#
+#But Dina Zhuzhleva suggested me this aproach to avoid suspicious usage of wild cards.
+#
+OBJS = $(SRCS:.c=.o)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 # The default goal is the first target of the first rule in the first makefile.
 # This is the reason for writtting this rule the first one
@@ -90,20 +97,16 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@ 
 
 # removes all generated object files
-.PHONY: clean
 clean:
 	@echo "================ REMOVING ALL OBJECTS ======================"
-	rm -f *.o
-	rm -f *.gch
+	rm -f $(OBJS)
 
 # removes target file and all generated object files
-.PHONY: fclean
 fclean: clean
 	@echo "================ REMOVING TARGET =========================="
 	rm -f $(NAME)
 
 # rebuild all after removing all
-.PHONY: re
 re: fclean all
 	@echo "================ REBUILDING ==============================="
 norma: $(SRCS)
@@ -111,6 +114,7 @@ norma: $(SRCS)
 	norminette $(SRCS)
 
 
+.PHONY: all clean fclean re
 
 # Pour rendre des bonus, vous devez inclure une règle bonus à votre Makefile qui 
 # ajoutera les divers headers, librairies ou fonctions qui ne sont pas autorisées 
@@ -118,9 +122,12 @@ norma: $(SRCS)
 # Les bonus doivent être dans un fichier différent : _bonus.{c/h}.
 # There is a contradiciton between french version and english version
 # Add structure s_list  declaration to your libft.h file:
-bonus: $(OBJS) $(BONUS_OBJS) 
+bonus: .bonus
+
+.bonus: $(OBJS) $(BONUS_OBJS) 
 	@echo "================ GATHERING BONUS OBJECTS ====================="
-	ar rcs $(NAME) $? 
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS) 
+	touch .bonus
 
 
 # FUMADA DE LMCD
@@ -143,7 +150,8 @@ bonus: $(OBJS) $(BONUS_OBJS)
 
 bonus_clean:
 	@echo "================ REMOVING BONUS OBJECTS  ==================="
-	rm -f ft_lst*.o
+	rm -f $(BONUS_OBJS)
+	rm -f .bonus
 
 bonus_norma: $(BONUS_SRCS)
 	@echo "================ CHECKING NORME FOR BONUS ================="
