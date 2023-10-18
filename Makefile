@@ -3,7 +3,7 @@
 
 NAME = libft.a
 CC = cc
-CFLAGS = -Wall -Wextra  -Werror
+CFLAGS = -g -Wall -Wextra  -Werror
 
 # From 4.4.3 The Function wildcard gnu make manual....
 # Althought wildcard exparnds automaticaly in rules
@@ -50,15 +50,15 @@ SRCS = ft_isalnum.c \
        ft_striteri.c
 
 
-BONUS_SRCS = ft_lstnew.c \
-			 ft_lstadd_front.c \
-			 ft_lstsize.c \
-			 ft_lstlast.c \
-			 ft_lstmap.c \
-			 ft_lstadd_back.c \
-			 ft_lstdelone.c \
-			 ft_lstclear.c \
-			 ft_lstiter.c \
+BONUS_SRCS = ft_lstnew_bonus.c \
+			 ft_lstadd_front_bonus.c \
+			 ft_lstsize_bonus.c \
+			 ft_lstlast_bonus.c \
+			 ft_lstmap_bonus.c \
+			 ft_lstadd_back_bonus.c \
+			 ft_lstdelone_bonus.c \
+			 ft_lstclear_bonus.c \
+			 ft_lstiter_bonus.c \
 
 # Generate a list of object files by replacing .c with .o
 
@@ -118,7 +118,7 @@ norma: $(SRCS)
 # Les bonus doivent être dans un fichier différent : _bonus.{c/h}.
 # There is a contradiciton between french version and english version
 # Add structure s_list  declaration to your libft.h file:
-bonus:  $(BONUS_OBJS) 
+bonus: $(OBJS) $(BONUS_OBJS) 
 	@echo "================ GATHERING BONUS OBJECTS ====================="
 	ar rcs $(NAME) $? 
 
