@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 13:37:18 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/12 12:10:16 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/17 18:36:03 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,6 @@ int	main(int argc, char **argv)
 		result = ft_split(src, *set);
 		show_words(result);
 		free(result);
-		//result = test_paco();
-		//show_words(result);
-		//free(result);
 	}
 	return (0);
 }

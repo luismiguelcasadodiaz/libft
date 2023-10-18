@@ -6,7 +6,7 @@
 /*   By: luicasad <luicasad@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 13:37:18 by luicasad          #+#    #+#             */
-/*   Updated: 2023/10/13 01:18:15 by luicasad         ###   ########.fr       */
+/*   Updated: 2023/10/17 18:40:51 by luicasad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,12 @@ void	del_str(void *word)
 void	print_str(void *word)
 {
 	if (word)
-		printf(">%s<\n",(char *)word);
+		printf(">%s<\n", (char *) word);
 }
 
 void	*my_upper(void *word)
 {
-	char *buf;
+	char	*buf;
 
 	if (word)
 	{
@@ -67,11 +67,11 @@ t_list	*insert_words_in_list(char	**words)
 		i = 0;
 		while (words[i] != NULL)
 		{
-			new_node=ft_lstnew(words[i++]);
+			new_node = ft_lstnew(words[i++]);
 			if (new_node == NULL)
 			{
 				ft_lstclear(&lst, &del_str);
-				return(lst);
+				return (lst);
 			}
 			ft_lstadd_back(&lst, new_node);
 		}
@@ -92,7 +92,10 @@ int	main(int argc, char **argv)
 	char	**result;
 
 	if (argc != 2)
-		printf("Usage ./test_ft_lstmap str (being str sentence whose words i split and capitalize.");
+	{
+		printf("Usage ./test_ft_lstmap str\n");
+		printf("being str sentence whose words i split and capitalize.\n");
+	}
 	else
 	{
 		src = argv[1];
@@ -101,7 +104,7 @@ int	main(int argc, char **argv)
 		show_words(result);
 		lst = insert_words_in_list(result);
 		ft_lstiter(lst, &print_str);
-		new=ft_lstmap(lst, &my_upper, &del_str);
+		new = ft_lstmap(lst, &my_upper, &del_str);
 		ft_lstiter(new, &print_str);
 		free(result);
 		ft_lstclear(&lst, &del_str);
