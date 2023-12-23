@@ -5,7 +5,7 @@ It will contain a lot of general-purpose functions your programs will rely upon.
 It is a static library,  with the prefix `lib` and suffix `.a` named `libft.a`. In the file libft.h will contain the prototypes of all functions included in my library.
 
 I use this [simple tutorial](https://makori-mildred.medium.com/how-to-create-static-library-in-c-and-how-to-use-it-b8b3e1fde999) to create the `Makefile`
-Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.sh](https://github.com/luismiguelcasadodiaz/libft/blob/main/touch.sh ) that automaticlly create the 42 files `.c` that compose `libfft.a` . Each file is created with the 42 header.
+Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.sh](https://github.com/luismiguelcasadodiaz/libft/blob/main/tests/touch.sh) that automaticlly create the 42 files `.c` that compose `libfft.a` . Each file is created with the 42 header.
 
 ## Libc functions
 |num| Function |Status|
