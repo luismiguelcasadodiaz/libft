@@ -52,15 +52,15 @@ Thanks to [Carles](https://github.com/krlspj) I created the bash script [touch.s
 ##   Bonus Part
 |num| Function |Status|
 |---|:---------|--------|
-|35| [ft_lstnew](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstnew.c)| 23 10 10|
-|36| [ft_lstadd_front](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstadd_front.c)| 23 10 10|
-|37| [ft_lstsize](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstsize.c)| 23 10 11|
-|38| [ft_lstlast](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstlast.c)| 23 10 11|
-|39| [ft_lstadd_back](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstadd_back.c)| 23 10 11|
-|40| [ft_lstdelone](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstdelone.c)| 23 10 12|
-|41| [ft_lstclear](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstclear.c)| 23 10 12|
-|42| [ft_lstiter](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstiter.c)| 23 10 12|
-|43| [ft_lstmap](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstmap.c)| 23 10 12|
+|35| [ft_lstnew](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstnew_bonus.c)| 23 10 10|
+|36| [ft_lstadd_front](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstadd_front_bonus.c)| 23 10 10|
+|37| [ft_lstsize](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstsize_bonus.c)| 23 10 11|
+|38| [ft_lstlast](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstlast_bonus.c)| 23 10 11|
+|39| [ft_lstadd_back](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstadd_back_bonus.c)| 23 10 11|
+|40| [ft_lstdelone](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstdelone_bonus.c)| 23 10 12|
+|41| [ft_lstclear](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstclear_bonus.c)| 23 10 12|
+|42| [ft_lstiter](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstiter_bonus.c)| 23 10 12|
+|43| [ft_lstmap](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_lstmap_bonus.c)| 23 10 12|
 
 ### Malloc summary
 [ft_calloc.c](https://github.com/luismiguelcasadodiaz/libft/blob/main/ft_calloc.c)
